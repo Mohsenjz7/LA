@@ -1,0 +1,371 @@
+<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بخش ۹ ـ جمع و اشتراک زیرفضاها | جبر خطی</title><link rel="stylesheet" href="../assets/style.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}catch(e){}</script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="../assets/mathjax/tex-svg.js"></script><script defer src="../assets/search-data.js"></script><script defer src="../assets/widgets.js"></script><script defer src="../assets/app.js"></script></head><body data-page="06-09" data-base="../"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="../index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها"><a class="nav-link " href="../index.html"  data-page="index"><span>آموزش جامع جبر خطی: استقلال خطی، پایه، بُعد و رتبه ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter" ><summary><span class="chapter-number">۵</span><span>استقلال خطی</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/05-01.html"  data-page="05-01"><span>بخش ۱ ـ پیش‌نیاز: ترکیب خطی و Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-02.html"  data-page="05-02"><span>بخش ۲ ـ انگیزه‌ی استقلال خطی: مسئله‌ی قیمت خانه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-03.html"  data-page="05-03"><span>بخش ۳ ـ تعریف دقیق استقلال و وابستگی خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-04.html"  data-page="05-04"><span>بخش ۴ ـ شهود هندسی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-05.html"  data-page="05-05"><span>بخش ۵ ـ روش ماتریسی تشخیص استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-06.html"  data-page="05-06"><span>بخش ۶ ـ قضیه‌های اصلی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-07.html"  data-page="05-07"><span>بخش ۷ ـ حذف بردارهای اضافی بدون تغییر Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-08.html"  data-page="05-08"><span>بخش ۸ ـ یکتایی ضرایب ترکیب خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-09.html"  data-page="05-09"><span>بخش ۹ ـ استقلال خطی توابع (Functions)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-10.html"  data-page="05-10"><span>بخش ۱۰ ـ استقلال خطی چندجمله‌ای‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-11.html"  data-page="05-11"><span>بخش ۱۱ ـ ارتباط استقلال خطی با جواب‌های دستگاه همگن</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-review.html"  data-page="05-review"><span>جمع‌بندی فصل پنجم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" open><summary><span class="chapter-number">۶</span><span>پایه و بُعد</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/06-01.html"  data-page="06-01"><span>بخش ۱ ـ شهود مفهوم پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-02.html"  data-page="06-02"><span>بخش ۲ ـ تعریف دقیق پایه (Basis)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-03.html"  data-page="06-03"><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-04.html"  data-page="06-04"><span>بخش ۴ ـ بُعد فضای برداری (Dimension)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-05.html"  data-page="06-05"><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-06.html"  data-page="06-06"><span>بخش ۶ ـ پایه و بُعد زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-07.html"  data-page="06-07"><span>بخش ۷ ـ گسترش مجموعه‌ی مستقل به یک پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-08.html"  data-page="06-08"><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link  active" href="../pages/06-09.html" aria-current="page" data-page="06-09"><span>بخش ۹ ـ جمع و اشتراک زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-10.html"  data-page="06-10"><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-11.html"  data-page="06-11"><span>بخش ۱۱ ـ دستگاه مختصات و پایه‌ی مرتب (Coordinates)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-12.html"  data-page="06-12"><span>بخش ۱۲ ـ تغییر پایه (مطلب تکمیلی)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-review.html"  data-page="06-review"><span>جمع‌بندی فصل ششم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۷</span><span>رتبه ماتریس</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/07-01.html"  data-page="07-01"><span>بخش ۱ ـ مرور فرم پلکانی و Pivot</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-02.html"  data-page="07-02"><span>بخش ۲ ـ فضای ستونی (Column Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-03.html"  data-page="07-03"><span>بخش ۳ ـ فضای سطری (Row Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-04.html"  data-page="07-04"><span>بخش ۴ ـ تأثیر عملیات سطری بر فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-05.html"  data-page="07-05"><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-06.html"  data-page="07-06"><span>بخش ۶ ـ فضای پوچ (Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-07.html"  data-page="07-07"><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-08.html"  data-page="07-08"><span>بخش ۸ ـ رتبه‌ی ستونی، رتبه‌ی سطری و Nullity</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-09.html"  data-page="07-09"><span>بخش ۹ ـ قضیه‌ی برابری رتبه‌ی سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-10.html"  data-page="07-10"><span>بخش ۱۰ ـ قضیه‌ی رتبه و پوچی (Rank–Nullity Theorem)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-11.html"  data-page="07-11"><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-12.html"  data-page="07-12"><span>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-13.html"  data-page="07-13"><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-14.html"  data-page="07-14"><span>بخش ۱۴ ـ شرط وجود جواب با فضای پوچ چپ</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-15.html"  data-page="07-15"><span>بخش ۱۵ ـ مثال جامع امتحانی با پارامتر</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-16.html"  data-page="07-16"><span>بخش ۱۶ ـ مثال اثباتی سطح بالا: چه زمانی \(A^TA\) وارون‌پذیر است؟</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-17.html"  data-page="07-17"><span>بخش ۱۷ ـ نکات ظریف و دام‌های پرتکرار امتحان</span><span class="done-dot" aria-hidden="true"></span></a></div></details><div class="nav-label">مرور نهایی</div><a class="nav-link " href="../pages/final-quiz.html"  data-page="final-quiz"><span>آزمون نهایی سه فصل</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/formula-sheet.html"  data-page="formula-sheet"><span>خلاصه‌ی نهایی هر سه فصل در یک نقشه‌ی مفهومی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/corrections.html"  data-page="corrections"><span>چند اصلاح علمی در خود جزوه‌ها</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter exercise-nav" ><summary><span class="chapter-number">✎</span><span>تمرین‌های تئوری</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/exercises.html"  data-page="exercises"><span>تمرین‌های تئوری</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/nhw2.html"  data-page="nhw2"><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/ht2.html"  data-page="ht2"><span>حل تمرین تئوری دوم (HT2) — ۶ سؤال</span><span class="done-dot" aria-hidden="true"></span></a></div></details></nav></aside><main id="lesson"><div class="breadcrumb"><a href="../index.html">خانه</a><span> / </span><span>پایه و بُعد</span></div><div class="lesson-header"><div class="eyebrow">فصل ۶ · درس</div><h1>بخش ۹ ـ جمع و اشتراک زیرفضاها</h1><div class="meta">صفحه ۲۱ از ۴۸ · ۶ دقیقه مطالعه تقریبی</div></div><article class="article"><p>این قسمت از فصل ششم کمی ظریف‌تر است و برای امتحان‌های سطح بالا اهمیت زیادی دارد.</p>
+<p>فرض کن <span class="math-inline" dir="ltr">\(W_1,W_2\)</span> دو زیرفضای <span class="math-inline" dir="ltr">\(V\)</span> باشند.</p>
+<h3 id="sub-1">۹.۱. اشتراک دو زیرفضا</h3>
+<p>تعریف:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1\cap W_2
+=
+\{v:v\in W_1\text{ and }v\in W_2\}
+\]</span></p>
+<p>یعنی بردارهایی که هم‌زمان در هر دو فضا هستند.</p>
+<p>اشتراک دو زیرفضا همیشه زیرفضاست.</p>
+<p>مثلاً:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1=\operatorname{Span}\{e_1,e_2\}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+W_2=\operatorname{Span}\{e_2,e_3\}
+\]</span></p>
+<p>در <span class="math-inline" dir="ltr">\(\mathbb R^3\)</span>.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1=\{(x,y,0)\}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+W_2=\{(0,y,z)\}
+\]</span></p>
+<p>اشتراک:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1\cap W_2=\{(0,y,0)\}
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1\cap W_2=\operatorname{Span}\{e_2\}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(W_1\cap W_2)=1
+\]</span></p>
+<h3 id="sub-2">۹.۲. جمع دو زیرفضا</h3>
+<p>تعریف:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1+W_2=
+\{w_1+w_2:w_1\in W_1,w_2\in W_2\}
+\]</span></p>
+<p>اگر همان مثال را ادامه دهیم:</p>
+<p><span class="math-display" dir="ltr">\[
+w_1=(x,y_1,0)
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+w_2=(0,y_2,z)
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+w_1+w_2=(x,y_1+y_2,z)
+\]</span></p>
+<p>این بردار می‌تواند هر عضوی از <span class="math-inline" dir="ltr">\(\mathbb R^3\)</span> باشد.</p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1+W_2=\mathbb R^3
+\]</span></p>
+<div class="widget" data-widget="planes"></div>
+<p>شهود هندسی: دو صفحه‌ی متمایز گذرنده از مبدأ در فضای سه‌بُعدی، یک خط مشترک دارند و مجموعشان کل فضای سه‌بُعدی است.</p>
+<h3 id="sub-3">تفاوت جمع و اجتماع</h3>
+<p>نباید</p>
+<p><span class="math-display" dir="ltr">\[
+W_1+W_2
+\]</span></p>
+<p>را با</p>
+<p><span class="math-display" dir="ltr">\[
+W_1\cup W_2
+\]</span></p>
+<p>اشتباه بگیریم.</p>
+<p>اجتماع دو زیرفضا لزوماً زیرفضا نیست.</p>
+<p>مثلاً در <span class="math-inline" dir="ltr">\(\mathbb R^2\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1=\operatorname{Span}\{(1,0)\}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+W_2=\operatorname{Span}\{(0,1)\}
+\]</span></p>
+<p>اجتماع آن‌ها فقط دو محور مختصات است.</p>
+<p>اما:</p>
+<p><span class="math-display" dir="ltr">\[
+(1,0)+(0,1)=(1,1)
+\]</span></p>
+<p>در اجتماع آن‌ها نیست.</p>
+<p>پس اجتماع تحت جمع بسته نیست.</p>
+<p>درحالی‌که:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1+W_2=\mathbb R^2
+\]</span></p>
+<hr/>
+<h3 id="sub-4">۹.۳. قضیه‌ی بُعد جمع دو زیرفضا</h3>
+<p>یکی از مهم‌ترین فرمول‌های فصل:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+\dim(W_1+W_2)
+=
+\dim W_1+\dim W_2-\dim(W_1\cap W_2)
+}
+\]</span></p>
+<p>شهود آن:</p>
+<p>وقتی بُعد <span class="math-inline" dir="ltr">\(W_1\)</span> و <span class="math-inline" dir="ltr">\(W_2\)</span> را جمع می‌کنیم، جهت‌های مشترک را دوبار شمرده‌ایم. باید بُعد بخش مشترک را یک بار کم کنیم.</p>
+<h3 id="sub-5">اثبات کامل قضیه</h3>
+<p>فرض کن پایه‌ی اشتراک:</p>
+<p><span class="math-display" dir="ltr">\[
+B_0=\{v_1,\ldots,v_s\}
+\]</span></p>
+<p>باشد.</p>
+<p>طبق قضیه‌ی گسترش پایه، آن را به پایه‌ی <span class="math-inline" dir="ltr">\(W_1\)</span> گسترش می‌دهیم:</p>
+<p><span class="math-display" dir="ltr">\[
+B_1=\{v_1,\ldots,v_s,u_1,\ldots,u_p\}
+\]</span></p>
+<p>و به پایه‌ی <span class="math-inline" dir="ltr">\(W_2\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+B_2=\{v_1,\ldots,v_s,w_1,\ldots,w_q\}
+\]</span></p>
+<p>ادعا:</p>
+<p><span class="math-display" dir="ltr">\[
+B=
+\{v_1,\ldots,v_s,u_1,\ldots,u_p,w_1,\ldots,w_q\}
+\]</span></p>
+<p>پایه‌ی <span class="math-inline" dir="ltr">\(W_1+W_2\)</span> است.</p>
+<p><strong>اثبات پوشش:</strong></p>
+<p>هر بردار <span class="math-inline" dir="ltr">\(x\in W_1+W_2\)</span> را می‌توان به صورت:</p>
+<p><span class="math-display" dir="ltr">\[
+x=x_1+x_2
+\]</span></p>
+<p>نوشت که <span class="math-inline" dir="ltr">\(x_1\in W_1\)</span> و <span class="math-inline" dir="ltr">\(x_2\in W_2\)</span>.</p>
+<p>از آنجا که <span class="math-inline" dir="ltr">\(B_1,B_2\)</span> پایه‌ی این فضاها هستند، <span class="math-inline" dir="ltr">\(x\)</span> ترکیب خطی اعضای <span class="math-inline" dir="ltr">\(B\)</span> خواهد بود.</p>
+<p><strong>اثبات استقلال:</strong></p>
+<p>فرض کنیم:</p>
+<p><span class="math-display" dir="ltr">\[
+\sum a_iv_i+\sum b_ju_j+\sum c_kw_k=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+-\left(\sum a_iv_i+\sum b_ju_j\right)
+=\sum c_kw_k
+\]</span></p>
+<p>سمت چپ در <span class="math-inline" dir="ltr">\(W_1\)</span> و سمت راست در <span class="math-inline" dir="ltr">\(W_2\)</span> است.</p>
+<p>بنابراین بردار مشترک در:</p>
+<p><span class="math-display" dir="ltr">\[
+W_1\cap W_2
+\]</span></p>
+<p>قرار دارد.</p>
+<p>پس می‌توان نوشت:</p>
+<p><span class="math-display" dir="ltr">\[
+\sum c_kw_k=\sum d_iv_i
+\]</span></p>
+<p>یا:</p>
+<p><span class="math-display" dir="ltr">\[
+\sum d_iv_i-\sum c_kw_k=0
+\]</span></p>
+<p>چون <span class="math-inline" dir="ltr">\(B_2\)</span> مستقل است:</p>
+<p><span class="math-display" dir="ltr">\[
+c_k=d_i=0
+\]</span></p>
+<p>حالا از رابطه‌ی اولیه:</p>
+<p><span class="math-display" dir="ltr">\[
+\sum a_iv_i+\sum b_ju_j=0
+\]</span></p>
+<p>و چون <span class="math-inline" dir="ltr">\(B_1\)</span> مستقل است:</p>
+<p><span class="math-display" dir="ltr">\[
+a_i=b_j=0
+\]</span></p>
+<p>بنابراین <span class="math-inline" dir="ltr">\(B\)</span> مستقل و پوشاست.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(W_1+W_2)=s+p+q
+\]</span></p>
+<p>درحالی‌که:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim W_1=s+p
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+\dim W_2=s+q
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+\dim(W_1\cap W_2)=s
+\]</span></p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+(s+p)+(s+q)-s=s+p+q
+\]</span></p>
+<p>قضیه ثابت شد.</p>
+<hr/>
+<h3 id="sub-6">۹.۴. مثال سطح بالا: پایه‌ی جمع و اشتراک در <span class="math-inline" dir="ltr">\(\mathbb R^4\)</span></h3>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+U=\operatorname{Span}
+\{(1,0,1,0),(0,1,0,1)\}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+W=\operatorname{Span}
+\{(1,1,1,1),(1,-1,0,0)\}
+\]</span></p>
+<p>می‌خواهیم پایه و بُعد</p>
+<p><span class="math-display" dir="ltr">\[
+U\cap W
+\]</span></p>
+<p>و</p>
+<p><span class="math-display" dir="ltr">\[
+U+W
+\]</span></p>
+<p>را پیدا کنیم.</p>
+<p>ابتدا نمایش عمومی بردار در <span class="math-inline" dir="ltr">\(U\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+u=(a,b,a,b)
+\]</span></p>
+<p>نمایش عمومی بردار در <span class="math-inline" dir="ltr">\(W\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+w=c(1,1,1,1)+d(1,-1,0,0)
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+w=(c+d,c-d,c,c)
+\]</span></p>
+<p>برای اشتراک:</p>
+<p><span class="math-display" dir="ltr">\[
+u=w
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+\begin{cases}
+a=c+d\\
+b=c-d\\
+a=c\\
+b=c
+\end{cases}
+\]</span></p>
+<p>از معادلات سوم و چهارم:</p>
+<p><span class="math-display" dir="ltr">\[
+a=b=c
+\]</span></p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+d=0
+\]</span></p>
+<p>پس بردار اشتراک:</p>
+<p><span class="math-display" dir="ltr">\[
+x=(c,c,c,c)
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+U\cap W=\operatorname{Span}\{(1,1,1,1)\}
+}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(U\cap W)=1
+\]</span></p>
+<p>هر کدام از <span class="math-inline" dir="ltr">\(U,W\)</span> دو‌بُعدی‌اند.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(U+W)=2+2-1=3
+\]</span></p>
+<p>برای پایه‌ی مجموع، اجتماع بردارهای مولد را در نظر می‌گیریم:</p>
+<p><span class="math-display" dir="ltr">\[
+\{
+(1,0,1,0),
+(0,1,0,1),
+(1,1,1,1),
+(1,-1,0,0)
+\}
+\]</span></p>
+<p>بردار سوم جمع دو بردار اول است، پس حذف می‌شود.</p>
+<p>پایه‌ی مجموع:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+B_{U+W}=
+\{
+(1,0,1,0),
+(0,1,0,1),
+(1,-1,0,0)
+\}
+}
+\]</span></p>
+<p>این سه بردار مستقل‌اند، بنابراین نتیجه با فرمول بُعد سازگار است.</p>
+<h3 id="sub-7">نتیجه‌ی تکمیلی: کران بُعد اشتراک</h3>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+U,W\subseteq\mathbb R^n
+\]</span></p>
+<p>آنگاه:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(U+W)\leq n
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim U+\dim W-\dim(U\cap W)\leq n
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+\dim(U\cap W)\geq\dim U+\dim W-n
+}
+\]</span></p>
+<p>مثلاً اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim U=5,\quad \dim W=4
+\]</span></p>
+<p>و هر دو زیرفضای <span class="math-inline" dir="ltr">\(\mathbb R^7\)</span> باشند:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(U\cap W)\geq5+4-7=2
+\]</span></p>
+<p>همچنین اشتراک نمی‌تواند بزرگ‌تر از هیچ‌کدام از دو فضا باشد.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{2\leq\dim(U\cap W)\leq4}
+\]</span></p>
+<p>این نوع سؤال بدون داشتن حتی یک بردار از فضاها قابل حل است.</p>
+<hr/>
+<h3 id="sub-8">۹.۵. جمع مستقیم (Direct Sum)</h3>
+<p>این مفهوم تکمیلی، نتیجه‌ی طبیعی فرمول قبلی است.</p>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+U\cap W=\{0\}
+\]</span></p>
+<p>آن‌گاه:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(U+W)=\dim U+\dim W
+\]</span></p>
+<p>و می‌گوییم جمع، مستقیم است:</p>
+<p><span class="math-display" dir="ltr">\[
+U\oplus W
+\]</span></p>
+<p>در جمع مستقیم، نمایش هر بردار به شکل</p>
+<p><span class="math-display" dir="ltr">\[
+x=u+w
+\]</span></p>
+<p>یکتاست.</p>
+<p>چرا؟</p>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+u_1+w_1=u_2+w_2
+\]</span></p>
+<p>آنگاه:</p>
+<p><span class="math-display" dir="ltr">\[
+u_1-u_2=w_2-w_1
+\]</span></p>
+<p>بردار سمت چپ در <span class="math-inline" dir="ltr">\(U\)</span> و سمت راست در <span class="math-inline" dir="ltr">\(W\)</span> است.</p>
+<p>پس در اشتراک قرار دارد و چون اشتراک فقط صفر است:</p>
+<p><span class="math-display" dir="ltr">\[
+u_1=u_2,\qquad w_1=w_2
+\]</span></p>
+<h3 id="sub-9">مثال</h3>
+<p><span class="math-display" dir="ltr">\[
+U=\operatorname{Span}\{e_1,e_2\}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+W=\operatorname{Span}\{e_3\}
+\]</span></p>
+<p>در <span class="math-inline" dir="ltr">\(\mathbb R^3\)</span>.</p>
+<p>داریم:</p>
+<p><span class="math-display" dir="ltr">\[
+U\cap W=\{0\}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\mathbb R^3=U\oplus W
+\]</span></p>
+<p>هر بردار <span class="math-inline" dir="ltr">\((x,y,z)\)</span> به‌صورت یکتا:</p>
+<p><span class="math-display" dir="ltr">\[
+(x,y,z)=(x,y,0)+(0,0,z)
+\]</span></p>
+<p>نمایش داده می‌شود.</p>
+<hr/>
+</article><button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button><nav class="pager" aria-label="بخش قبلی و بعدی"><a class="page-link" href="../pages/06-08.html"><small>← بخش قبلی</small><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span></a><a class="page-link next" href="../pages/06-10.html"><small>بخش بعدی →</small><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span></a></nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه"><h2>در این صفحه</h2><a href="#sub-1">۹.۱. اشتراک دو زیرفضا</a><a href="#sub-2">۹.۲. جمع دو زیرفضا</a><a href="#sub-3">تفاوت جمع و اجتماع</a><a href="#sub-4">۹.۳. قضیه‌ی بُعد جمع دو زیرفضا</a><a href="#sub-5">اثبات کامل قضیه</a><a href="#sub-6">۹.۴. مثال سطح بالا: پایه‌ی جمع و اشتراک در \(\mathbb R^4\)</a><a href="#sub-7">نتیجه‌ی تکمیلی: کران بُعد اشتراک</a><a href="#sub-8">۹.۵. جمع مستقیم (Direct Sum)</a><a href="#sub-9">مثال</a></aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>

@@ -1,0 +1,309 @@
+<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس | جبر خطی</title><link rel="stylesheet" href="../assets/style.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}catch(e){}</script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="../assets/mathjax/tex-svg.js"></script><script defer src="../assets/search-data.js"></script><script defer src="../assets/widgets.js"></script><script defer src="../assets/app.js"></script></head><body data-page="07-12" data-base="../"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="../index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها"><a class="nav-link " href="../index.html"  data-page="index"><span>آموزش جامع جبر خطی: استقلال خطی، پایه، بُعد و رتبه ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter" ><summary><span class="chapter-number">۵</span><span>استقلال خطی</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/05-01.html"  data-page="05-01"><span>بخش ۱ ـ پیش‌نیاز: ترکیب خطی و Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-02.html"  data-page="05-02"><span>بخش ۲ ـ انگیزه‌ی استقلال خطی: مسئله‌ی قیمت خانه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-03.html"  data-page="05-03"><span>بخش ۳ ـ تعریف دقیق استقلال و وابستگی خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-04.html"  data-page="05-04"><span>بخش ۴ ـ شهود هندسی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-05.html"  data-page="05-05"><span>بخش ۵ ـ روش ماتریسی تشخیص استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-06.html"  data-page="05-06"><span>بخش ۶ ـ قضیه‌های اصلی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-07.html"  data-page="05-07"><span>بخش ۷ ـ حذف بردارهای اضافی بدون تغییر Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-08.html"  data-page="05-08"><span>بخش ۸ ـ یکتایی ضرایب ترکیب خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-09.html"  data-page="05-09"><span>بخش ۹ ـ استقلال خطی توابع (Functions)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-10.html"  data-page="05-10"><span>بخش ۱۰ ـ استقلال خطی چندجمله‌ای‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-11.html"  data-page="05-11"><span>بخش ۱۱ ـ ارتباط استقلال خطی با جواب‌های دستگاه همگن</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-review.html"  data-page="05-review"><span>جمع‌بندی فصل پنجم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۶</span><span>پایه و بُعد</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/06-01.html"  data-page="06-01"><span>بخش ۱ ـ شهود مفهوم پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-02.html"  data-page="06-02"><span>بخش ۲ ـ تعریف دقیق پایه (Basis)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-03.html"  data-page="06-03"><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-04.html"  data-page="06-04"><span>بخش ۴ ـ بُعد فضای برداری (Dimension)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-05.html"  data-page="06-05"><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-06.html"  data-page="06-06"><span>بخش ۶ ـ پایه و بُعد زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-07.html"  data-page="06-07"><span>بخش ۷ ـ گسترش مجموعه‌ی مستقل به یک پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-08.html"  data-page="06-08"><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-09.html"  data-page="06-09"><span>بخش ۹ ـ جمع و اشتراک زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-10.html"  data-page="06-10"><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-11.html"  data-page="06-11"><span>بخش ۱۱ ـ دستگاه مختصات و پایه‌ی مرتب (Coordinates)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-12.html"  data-page="06-12"><span>بخش ۱۲ ـ تغییر پایه (مطلب تکمیلی)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-review.html"  data-page="06-review"><span>جمع‌بندی فصل ششم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" open><summary><span class="chapter-number">۷</span><span>رتبه ماتریس</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/07-01.html"  data-page="07-01"><span>بخش ۱ ـ مرور فرم پلکانی و Pivot</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-02.html"  data-page="07-02"><span>بخش ۲ ـ فضای ستونی (Column Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-03.html"  data-page="07-03"><span>بخش ۳ ـ فضای سطری (Row Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-04.html"  data-page="07-04"><span>بخش ۴ ـ تأثیر عملیات سطری بر فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-05.html"  data-page="07-05"><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-06.html"  data-page="07-06"><span>بخش ۶ ـ فضای پوچ (Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-07.html"  data-page="07-07"><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-08.html"  data-page="07-08"><span>بخش ۸ ـ رتبه‌ی ستونی، رتبه‌ی سطری و Nullity</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-09.html"  data-page="07-09"><span>بخش ۹ ـ قضیه‌ی برابری رتبه‌ی سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-10.html"  data-page="07-10"><span>بخش ۱۰ ـ قضیه‌ی رتبه و پوچی (Rank–Nullity Theorem)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-11.html"  data-page="07-11"><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link  active" href="../pages/07-12.html" aria-current="page" data-page="07-12"><span>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-13.html"  data-page="07-13"><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-14.html"  data-page="07-14"><span>بخش ۱۴ ـ شرط وجود جواب با فضای پوچ چپ</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-15.html"  data-page="07-15"><span>بخش ۱۵ ـ مثال جامع امتحانی با پارامتر</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-16.html"  data-page="07-16"><span>بخش ۱۶ ـ مثال اثباتی سطح بالا: چه زمانی \(A^TA\) وارون‌پذیر است؟</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-17.html"  data-page="07-17"><span>بخش ۱۷ ـ نکات ظریف و دام‌های پرتکرار امتحان</span><span class="done-dot" aria-hidden="true"></span></a></div></details><div class="nav-label">مرور نهایی</div><a class="nav-link " href="../pages/final-quiz.html"  data-page="final-quiz"><span>آزمون نهایی سه فصل</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/formula-sheet.html"  data-page="formula-sheet"><span>خلاصه‌ی نهایی هر سه فصل در یک نقشه‌ی مفهومی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/corrections.html"  data-page="corrections"><span>چند اصلاح علمی در خود جزوه‌ها</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter exercise-nav" ><summary><span class="chapter-number">✎</span><span>تمرین‌های تئوری</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/exercises.html"  data-page="exercises"><span>تمرین‌های تئوری</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/nhw2.html"  data-page="nhw2"><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/ht2.html"  data-page="ht2"><span>حل تمرین تئوری دوم (HT2) — ۶ سؤال</span><span class="done-dot" aria-hidden="true"></span></a></div></details></nav></aside><main id="lesson"><div class="breadcrumb"><a href="../index.html">خانه</a><span> / </span><span>رتبه ماتریس</span></div><div class="lesson-header"><div class="eyebrow">فصل ۷ · درس</div><h1>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</h1><div class="meta">صفحه ۳۷ از ۴۸ · ۴ دقیقه مطالعه تقریبی</div></div><article class="article"><p>Four Fundamental Subspaces مهم‌ترین جمع‌بندی این سه فصل است.</p>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+A\in\mathbb R^{m\times n}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\operatorname{rank}(A)=r
+\]</span></p>
+<p>چهار زیرفضای بنیادی آن عبارت‌اند از:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>زیرفضا</th>
+<th>تعریف</th>
+<th>فضای محیط</th>
+<th style="text-align:right">بُعد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Column Space</td>
+<td><span class="math-inline" dir="ltr">\(C(A)\)</span></td>
+<td><span class="math-inline" dir="ltr">\(\mathbb R^m\)</span></td>
+<td style="text-align:right"><span class="math-inline" dir="ltr">\(r\)</span></td>
+</tr>
+<tr>
+<td>Row Space</td>
+<td><span class="math-inline" dir="ltr">\(C(A^T)\)</span></td>
+<td><span class="math-inline" dir="ltr">\(\mathbb R^n\)</span></td>
+<td style="text-align:right"><span class="math-inline" dir="ltr">\(r\)</span></td>
+</tr>
+<tr>
+<td>Null Space</td>
+<td><span class="math-inline" dir="ltr">\(N(A)\)</span></td>
+<td><span class="math-inline" dir="ltr">\(\mathbb R^n\)</span></td>
+<td style="text-align:right"><span class="math-inline" dir="ltr">\(n-r\)</span></td>
+</tr>
+<tr>
+<td>Left Null Space</td>
+<td><span class="math-inline" dir="ltr">\(N(A^T)\)</span></td>
+<td><span class="math-inline" dir="ltr">\(\mathbb R^m\)</span></td>
+<td style="text-align:right"><span class="math-inline" dir="ltr">\(m-r\)</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>نمودار صفحه‌ی ۳۳ جزوه دقیقاً ارتباط این چهار فضا را نشان می‌دهد. در ادامه ساختار آن را باز می‌کنیم.</p>
+<div class="widget" data-widget="four-spaces"></div>
+<p>فضای سطری و فضای پوچ در ورودی قرار دارند. فضای ستونی و فضای پوچ چپ در خروجی قرار دارند. هر جفت، مکمل متعامد یکدیگر است.</p>
+<h3 id="sub-1">۱۲.۱. چرا فضای سطری بر فضای پوچ عمود است؟</h3>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+x\in N(A)
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=0
+\]</span></p>
+<p>اگر سطرهای <span class="math-inline" dir="ltr">\(A\)</span> را <span class="math-inline" dir="ltr">\(r_i^T\)</span> بنامیم:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=
+\begin{bmatrix}
+r_1^Tx\\
+r_2^Tx\\
+\vdots\\
+r_m^Tx
+\end{bmatrix}
+=
+0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+r_i^Tx=0
+\]</span></p>
+<p>برای تمام سطرها.</p>
+<p>حالا هر بردار <span class="math-inline" dir="ltr">\(u\in R(A)\)</span> ترکیب خطی سطرهاست:</p>
+<p><span class="math-display" dir="ltr">\[
+u=c_1r_1+\cdots+c_mr_m
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+u^Tx=
+c_1r_1^Tx+\cdots+c_mr_m^Tx=0
+\]</span></p>
+<p>پس هر بردار فضای سطری بر هر بردار فضای پوچ عمود است.</p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+R(A)\perp N(A)
+\]</span></p>
+<p>و حتی رابطه‌ی قوی‌تر:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{N(A)=R(A)^\perp}
+\]</span></p>
+<p>زیرا اگر برداری بر تمام اعضای فضای سطری عمود باشد، به‌خصوص بر تمام سطرهای ماتریس عمود است و بنابراین <span class="math-inline" dir="ltr">\(Ax=0\)</span>.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{R(A)=N(A)^\perp}
+\]</span></p>
+<h3 id="sub-2">۱۲.۲. چرا فضای ستونی بر فضای پوچ چپ عمود است؟</h3>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+y\in N(A^T)
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+A^Ty=0
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+z\in C(A)
+\]</span></p>
+<p>پس برای یک <span class="math-inline" dir="ltr">\(x\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+z=Ax
+\]</span></p>
+<p>ضرب داخلی:</p>
+<p><span class="math-display" dir="ltr">\[
+y^Tz=y^TAx
+\]</span></p>
+<p>اما:</p>
+<p><span class="math-display" dir="ltr">\[
+y^TA=(A^Ty)^T=0^T
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+y^Tz=0
+\]</span></p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+C(A)\perp N(A^T)
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+N(A^T)=C(A)^\perp
+}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+C(A)=N(A^T)^\perp
+}
+\]</span></p>
+<h3 id="sub-3">نتیجه‌ی اساسی: تجزیه‌ی متعامد</h3>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+\mathbb R^n=R(A)\oplus N(A)
+}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+\mathbb R^m=C(A)\oplus N(A^T)
+}
+\]</span></p>
+<p>یعنی هر بردار ورودی <span class="math-inline" dir="ltr">\(x\)</span> به‌شکل یکتای زیر تجزیه می‌شود:</p>
+<p><span class="math-display" dir="ltr">\[
+x=x_R+x_N
+\]</span></p>
+<p>که:</p>
+<p><span class="math-display" dir="ltr">\[
+x_R\in R(A)
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+x_N\in N(A)
+\]</span></p>
+<p>حال:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=A(x_R+x_N)
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+=Ax_R+Ax_N
+\]</span></p>
+<p>چون <span class="math-inline" dir="ltr">\(Ax_N=0\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{Ax=Ax_R}
+\]</span></p>
+<p>پس ماتریس فقط مؤلفه‌ی فضای سطری ورودی را به خروجی منتقل می‌کند و مؤلفه‌ی فضای پوچ را از بین می‌برد.</p>
+<p>این یکی از عمیق‌ترین تفسیرهای هندسی Rank است.</p>
+<hr/>
+<h3 id="sub-4">۱۲.۳. مثال اصلی جزوه: چهار فضا برای ماتریس <span class="math-inline" dir="ltr">\(2\times2\)</span></h3>
+<p><span class="math-display" dir="ltr">\[
+A=
+\begin{bmatrix}
+1&amp;2\\
+3&amp;6
+\end{bmatrix}
+\]</span></p>
+<p>این ماتریس رتبه‌ی یک دارد.</p>
+<h3 id="sub-5">فضای ستونی</h3>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+C(A)=\operatorname{Span}\{(1,3)\}
+}
+\]</span></p>
+<h3 id="sub-6">فضای سطری</h3>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+R(A)=\operatorname{Span}\{(1,2)\}
+}
+\]</span></p>
+<h3 id="sub-7">فضای پوچ</h3>
+<p>حل:</p>
+<p><span class="math-display" dir="ltr">\[
+x_1+2x_2=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+x_1=-2x_2
+\]</span></p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+N(A)=\operatorname{Span}\{(-2,1)\}
+}
+\]</span></p>
+<h3 id="sub-8">فضای پوچ چپ</h3>
+<p>حل:</p>
+<p><span class="math-display" dir="ltr">\[
+y_1+3y_2=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+N(A^T)=\operatorname{Span}\{(-3,1)\}
+}
+\]</span></p>
+<div class="widget" data-widget="orthogonal"></div>
+<p>هر چهار زیرفضا یک‌بُعدی هستند.</p>
+<p><span class="math-display" dir="ltr">\[
+r=1,\quad n-r=1,\quad m-r=1
+\]</span></p>
+<p>از نظر هندسی، دو خط عمود بر هم در فضای ورودی و دو خط عمود بر هم در فضای خروجی داریم.</p>
+<h3 id="sub-9">مثال عددی: تجزیه‌ی یک ورودی</h3>
+<p>بردار:</p>
+<p><span class="math-display" dir="ltr">\[
+x=(4,3)
+\]</span></p>
+<p>را به مؤلفه‌ی فضای سطری و فضای پوچ تجزیه کنیم.</p>
+<p>فضای سطری توسط:</p>
+<p><span class="math-display" dir="ltr">\[
+r=(1,2)
+\]</span></p>
+<p>تولید می‌شود.</p>
+<p>فضای پوچ توسط:</p>
+<p><span class="math-display" dir="ltr">\[
+n=(-2,1)
+\]</span></p>
+<p>تولید می‌شود.</p>
+<p>می‌خواهیم:</p>
+<p><span class="math-display" dir="ltr">\[
+x=ar+bn
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+a(1,2)+b(-2,1)=(4,3)
+\]</span></p>
+<p>دستگاه:</p>
+<p><span class="math-display" dir="ltr">\[
+\begin{cases}
+a-2b=4\\
+2a+b=3
+\end{cases}
+\]</span></p>
+<p>حل:</p>
+<p><span class="math-display" dir="ltr">\[
+a=2,\quad b=-1
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+x=2(1,2)-( -2,1)
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+=(2,4)+(2,-1)
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+x_R=(2,4)
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+x_N=(2,-1)
+\]</span></p>
+<p>کنترل:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax_N=
+\begin{bmatrix}
+1&amp;2\\
+3&amp;6
+\end{bmatrix}
+\begin{bmatrix}2\\-1\end{bmatrix}
+=
+\begin{bmatrix}0\\0\end{bmatrix}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax_R=
+\begin{bmatrix}10\\30\end{bmatrix}
+\]</span></p>
+<p>همچنین:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=
+\begin{bmatrix}10\\30\end{bmatrix}
+\]</span></p>
+<p>پس واقعاً:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=Ax_R
+\]</span></p>
+<p>مؤلفه‌ی فضای پوچ هیچ تأثیری بر خروجی ندارد.</p>
+<hr/>
+</article><button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button><nav class="pager" aria-label="بخش قبلی و بعدی"><a class="page-link" href="../pages/07-11.html"><small>← بخش قبلی</small><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span></a><a class="page-link next" href="../pages/07-13.html"><small>بخش بعدی →</small><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span></a></nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه"><h2>در این صفحه</h2><a href="#sub-1">۱۲.۱. چرا فضای سطری بر فضای پوچ عمود است؟</a><a href="#sub-2">۱۲.۲. چرا فضای ستونی بر فضای پوچ چپ عمود است؟</a><a href="#sub-3">نتیجه‌ی اساسی: تجزیه‌ی متعامد</a><a href="#sub-4">۱۲.۳. مثال اصلی جزوه: چهار فضا برای ماتریس \(2\times2\)</a><a href="#sub-5">فضای ستونی</a><a href="#sub-6">فضای سطری</a><a href="#sub-7">فضای پوچ</a><a href="#sub-8">فضای پوچ چپ</a><a href="#sub-9">مثال عددی: تجزیه‌ی یک ورودی</a></aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>

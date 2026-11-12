@@ -1,0 +1,328 @@
+<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بخش ۶ ـ فضای پوچ (Null Space) | جبر خطی</title><link rel="stylesheet" href="../assets/style.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}catch(e){}</script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="../assets/mathjax/tex-svg.js"></script><script defer src="../assets/search-data.js"></script><script defer src="../assets/widgets.js"></script><script defer src="../assets/app.js"></script></head><body data-page="07-06" data-base="../"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="../index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها"><a class="nav-link " href="../index.html"  data-page="index"><span>آموزش جامع جبر خطی: استقلال خطی، پایه، بُعد و رتبه ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter" ><summary><span class="chapter-number">۵</span><span>استقلال خطی</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/05-01.html"  data-page="05-01"><span>بخش ۱ ـ پیش‌نیاز: ترکیب خطی و Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-02.html"  data-page="05-02"><span>بخش ۲ ـ انگیزه‌ی استقلال خطی: مسئله‌ی قیمت خانه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-03.html"  data-page="05-03"><span>بخش ۳ ـ تعریف دقیق استقلال و وابستگی خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-04.html"  data-page="05-04"><span>بخش ۴ ـ شهود هندسی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-05.html"  data-page="05-05"><span>بخش ۵ ـ روش ماتریسی تشخیص استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-06.html"  data-page="05-06"><span>بخش ۶ ـ قضیه‌های اصلی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-07.html"  data-page="05-07"><span>بخش ۷ ـ حذف بردارهای اضافی بدون تغییر Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-08.html"  data-page="05-08"><span>بخش ۸ ـ یکتایی ضرایب ترکیب خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-09.html"  data-page="05-09"><span>بخش ۹ ـ استقلال خطی توابع (Functions)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-10.html"  data-page="05-10"><span>بخش ۱۰ ـ استقلال خطی چندجمله‌ای‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-11.html"  data-page="05-11"><span>بخش ۱۱ ـ ارتباط استقلال خطی با جواب‌های دستگاه همگن</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-review.html"  data-page="05-review"><span>جمع‌بندی فصل پنجم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۶</span><span>پایه و بُعد</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/06-01.html"  data-page="06-01"><span>بخش ۱ ـ شهود مفهوم پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-02.html"  data-page="06-02"><span>بخش ۲ ـ تعریف دقیق پایه (Basis)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-03.html"  data-page="06-03"><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-04.html"  data-page="06-04"><span>بخش ۴ ـ بُعد فضای برداری (Dimension)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-05.html"  data-page="06-05"><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-06.html"  data-page="06-06"><span>بخش ۶ ـ پایه و بُعد زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-07.html"  data-page="06-07"><span>بخش ۷ ـ گسترش مجموعه‌ی مستقل به یک پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-08.html"  data-page="06-08"><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-09.html"  data-page="06-09"><span>بخش ۹ ـ جمع و اشتراک زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-10.html"  data-page="06-10"><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-11.html"  data-page="06-11"><span>بخش ۱۱ ـ دستگاه مختصات و پایه‌ی مرتب (Coordinates)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-12.html"  data-page="06-12"><span>بخش ۱۲ ـ تغییر پایه (مطلب تکمیلی)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-review.html"  data-page="06-review"><span>جمع‌بندی فصل ششم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" open><summary><span class="chapter-number">۷</span><span>رتبه ماتریس</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/07-01.html"  data-page="07-01"><span>بخش ۱ ـ مرور فرم پلکانی و Pivot</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-02.html"  data-page="07-02"><span>بخش ۲ ـ فضای ستونی (Column Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-03.html"  data-page="07-03"><span>بخش ۳ ـ فضای سطری (Row Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-04.html"  data-page="07-04"><span>بخش ۴ ـ تأثیر عملیات سطری بر فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-05.html"  data-page="07-05"><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link  active" href="../pages/07-06.html" aria-current="page" data-page="07-06"><span>بخش ۶ ـ فضای پوچ (Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-07.html"  data-page="07-07"><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-08.html"  data-page="07-08"><span>بخش ۸ ـ رتبه‌ی ستونی، رتبه‌ی سطری و Nullity</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-09.html"  data-page="07-09"><span>بخش ۹ ـ قضیه‌ی برابری رتبه‌ی سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-10.html"  data-page="07-10"><span>بخش ۱۰ ـ قضیه‌ی رتبه و پوچی (Rank–Nullity Theorem)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-11.html"  data-page="07-11"><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-12.html"  data-page="07-12"><span>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-13.html"  data-page="07-13"><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-14.html"  data-page="07-14"><span>بخش ۱۴ ـ شرط وجود جواب با فضای پوچ چپ</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-15.html"  data-page="07-15"><span>بخش ۱۵ ـ مثال جامع امتحانی با پارامتر</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-16.html"  data-page="07-16"><span>بخش ۱۶ ـ مثال اثباتی سطح بالا: چه زمانی \(A^TA\) وارون‌پذیر است؟</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-17.html"  data-page="07-17"><span>بخش ۱۷ ـ نکات ظریف و دام‌های پرتکرار امتحان</span><span class="done-dot" aria-hidden="true"></span></a></div></details><div class="nav-label">مرور نهایی</div><a class="nav-link " href="../pages/final-quiz.html"  data-page="final-quiz"><span>آزمون نهایی سه فصل</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/formula-sheet.html"  data-page="formula-sheet"><span>خلاصه‌ی نهایی هر سه فصل در یک نقشه‌ی مفهومی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/corrections.html"  data-page="corrections"><span>چند اصلاح علمی در خود جزوه‌ها</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter exercise-nav" ><summary><span class="chapter-number">✎</span><span>تمرین‌های تئوری</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/exercises.html"  data-page="exercises"><span>تمرین‌های تئوری</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/nhw2.html"  data-page="nhw2"><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/ht2.html"  data-page="ht2"><span>حل تمرین تئوری دوم (HT2) — ۶ سؤال</span><span class="done-dot" aria-hidden="true"></span></a></div></details></nav></aside><main id="lesson"><div class="breadcrumb"><a href="../index.html">خانه</a><span> / </span><span>رتبه ماتریس</span></div><div class="lesson-header"><div class="eyebrow">فصل ۷ · درس</div><h1>بخش ۶ ـ فضای پوچ (Null Space)</h1><div class="meta">صفحه ۳۱ از ۴۸ · ۵ دقیقه مطالعه تقریبی</div></div><article class="article"><p>به معادله‌ی همگن برگردیم:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=0
+\]</span></p>
+<p>مجموعه‌ی تمام جواب‌های آن را فضای پوچ یا هسته‌ی ماتریس می‌نامیم.</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+N(A)=\{x\in\mathbb R^n:Ax=0\}
+}
+\]</span></p>
+<p>نام‌های دیگر:</p>
+<p>Null Space، Kernel و فضای صفرساز.</p>
+<p>تعریف آن در بخش دوم فایل Matrix Rank آمده است. <a href="../sources/7-Matrix%20Rank.pdf#page=18">منبع</a></p>
+<p>شهود:</p>
+<p><strong>Null Space شامل تمام ورودی‌هایی است که ماتریس آن‌ها را به صفر می‌فرستد.</strong></p>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+A:\mathbb R^n\to\mathbb R^m
+\]</span></p>
+<p>آن‌گاه:</p>
+<p><span class="math-display" dir="ltr">\[
+N(A)\subseteq\mathbb R^n
+\]</span></p>
+<p>یعنی فضای پوچ در فضای ورودی قرار دارد.</p>
+<h3 id="sub-1">مثال هندسی</h3>
+<p><span class="math-display" dir="ltr">\[
+A=
+\begin{bmatrix}
+1&amp;0&amp;0\\
+0&amp;1&amp;0
+\end{bmatrix}
+\]</span></p>
+<p>این ماتریس هر بردار</p>
+<p><span class="math-display" dir="ltr">\[
+(x,y,z)
+\]</span></p>
+<p>را به</p>
+<p><span class="math-display" dir="ltr">\[
+(x,y)
+\]</span></p>
+<p>تبدیل می‌کند.</p>
+<p><span class="math-display" dir="ltr">\[
+A
+\begin{bmatrix}x\\y\\z\end{bmatrix}
+=
+\begin{bmatrix}x\\y\end{bmatrix}
+\]</span></p>
+<p>برای اینکه خروجی صفر شود:</p>
+<p><span class="math-display" dir="ltr">\[
+x=0,\quad y=0
+\]</span></p>
+<p>ولی <span class="math-inline" dir="ltr">\(z\)</span> آزاد است.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+N(A)=
+\left\{
+\begin{bmatrix}0\\0\\z\end{bmatrix}:z\in\mathbb R
+\right\}
+\]</span></p>
+<p>یعنی:</p>
+<p><span class="math-display" dir="ltr">\[
+N(A)=\operatorname{Span}\{(0,0,1)\}
+\]</span></p>
+<div class="widget" data-widget="projection"></div>
+<p>حذف مؤلفه‌ی z در تصویر روی صفحه‌ی xy؛ تمام بردارهای محور z به صفر نگاشته می‌شوند.</p>
+<p>این ماتریس اطلاعات مربوط به مؤلفه‌ی سوم را از بین می‌برد.</p>
+<p>مثلاً تمام بردارهای</p>
+<p><span class="math-display" dir="ltr">\[
+(2,3,0),\quad(2,3,5),\quad(2,3,-100)
+\]</span></p>
+<p>به یک خروجی مشترک</p>
+<p><span class="math-display" dir="ltr">\[
+(2,3)
+\]</span></p>
+<p>نگاشته می‌شوند.</p>
+<p>تفاوت آن‌ها در فضای پوچ قرار دارد.</p>
+<hr/>
+<h3 id="sub-2">۶.۱. چرا فضای پوچ همیشه زیرفضاست؟</h3>
+<p>باید سه شرط را بررسی کنیم.</p>
+<p><strong>وجود بردار صفر:</strong></p>
+<p><span class="math-display" dir="ltr">\[
+A0=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+0\in N(A)
+\]</span></p>
+<p><strong>بسته بودن نسبت به جمع:</strong></p>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+x,y\in N(A)
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=0,\quad Ay=0
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+A(x+y)=Ax+Ay=0
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+x+y\in N(A)
+\]</span></p>
+<p><strong>بسته بودن نسبت به ضرب اسکالر:</strong></p>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+Ax=0
+\]</span></p>
+<p>آنگاه:</p>
+<p><span class="math-display" dir="ltr">\[
+A(cx)=cAx=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+cx\in N(A)
+\]</span></p>
+<p>در نتیجه <span class="math-inline" dir="ltr">\(N(A)\)</span> زیرفضاست.</p>
+<h3 id="sub-3">آیا مجموعه‌ی جواب‌های <span class="math-inline" dir="ltr">\(Ax=b\)</span> نیز زیرفضاست؟</h3>
+<p>اگر <span class="math-inline" dir="ltr">\(b\neq0\)</span>، خیر.</p>
+<p>زیرا:</p>
+<p><span class="math-display" dir="ltr">\[
+A0=0\neq b
+\]</span></p>
+<p>پس بردار صفر عضو مجموعه‌ی جواب‌ها نیست.</p>
+<p>اگر دستگاه جواب داشته باشد، مجموعه‌ی جواب‌های آن یک فضای افاین یا Affine Subspace است؛ یعنی انتقالی از یک فضای برداری.</p>
+<p>این موضوع پاسخ سؤال مطرح‌شده در بخش Let's Think جزوه است.</p>
+<hr/>
+<h3 id="sub-4">۶.۲. پیدا کردن پایه‌ی Null Space</h3>
+<p>روش عمومی:</p>
+<p>ابتدا <span class="math-inline" dir="ltr">\(Ax=0\)</span> را با حذف گاوسی حل می‌کنیم. متغیرهای آزاد را به پارامتر تبدیل می‌کنیم. سپس جواب عمومی را به‌شکل ترکیب خطی بردارها می‌نویسیم.</p>
+<p>بردارهای مربوط به پارامترهای آزاد، پایه‌ی فضای پوچ را تشکیل می‌دهند.</p>
+<h3 id="sub-5">ادامه‌ی مثال اصلی صفحه‌ی ۱۴ جزوه</h3>
+<p>داشتیم:</p>
+<p><span class="math-display" dir="ltr">\[
+R=
+\begin{bmatrix}
+1&amp;0&amp;-1&amp;0&amp;1\\
+0&amp;1&amp;2&amp;0&amp;-2\\
+0&amp;0&amp;0&amp;1&amp;2\\
+0&amp;0&amp;0&amp;0&amp;0
+\end{bmatrix}
+\]</span></p>
+<p>می‌خواهیم:</p>
+<p><span class="math-display" dir="ltr">\[
+Rx=0
+\]</span></p>
+<p>را حل کنیم.</p>
+<p>معادلات:</p>
+<p><span class="math-display" dir="ltr">\[
+\begin{cases}
+x_1-x_3+x_5=0\\
+x_2+2x_3-2x_5=0\\
+x_4+2x_5=0
+\end{cases}
+\]</span></p>
+<p>متغیرهای آزاد:</p>
+<p><span class="math-display" dir="ltr">\[
+x_3=s,\qquad x_5=t
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+x_1=s-t
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+x_2=-2s+2t
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+x_4=-2t
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+x=
+\begin{bmatrix}
+s-t\\
+-2s+2t\\
+s\\
+-2t\\
+t
+\end{bmatrix}
+\]</span></p>
+<p>تفکیک پارامترها:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+x=
+s\begin{bmatrix}
+1\\-2\\1\\0\\0
+\end{bmatrix}
++
+t\begin{bmatrix}
+-1\\2\\0\\-2\\1
+\end{bmatrix}
+}
+\]</span></p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+B_N=
+\left\{
+\begin{bmatrix}1\\-2\\1\\0\\0\end{bmatrix},
+\begin{bmatrix}-1\\2\\0\\-2\\1\end{bmatrix}
+\right\}
+}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim N(A)=2
+\]</span></p>
+<h3 id="sub-6">چرا این بردارها مستقل‌اند؟</h3>
+<p>اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+\alpha
+\begin{bmatrix}1\\-2\\1\\0\\0\end{bmatrix}
++
+\beta
+\begin{bmatrix}-1\\2\\0\\-2\\1\end{bmatrix}
+=0
+\]</span></p>
+<p>از مؤلفه‌ی سوم:</p>
+<p><span class="math-display" dir="ltr">\[
+\alpha=0
+\]</span></p>
+<p>و از مؤلفه‌ی پنجم:</p>
+<p><span class="math-display" dir="ltr">\[
+\beta=0
+\]</span></p>
+<p>پس مستقل‌اند.</p>
+<h3 id="sub-7">ارتباط با ستون‌های وابسته</h3>
+<p>بردار اول فضای پوچ:</p>
+<p><span class="math-display" dir="ltr">\[
+n_1=(1,-2,1,0,0)
+\]</span></p>
+<p>به این معناست:</p>
+<p><span class="math-display" dir="ltr">\[
+An_1=0
+\]</span></p>
+<p>یعنی:</p>
+<p><span class="math-display" dir="ltr">\[
+a_1-2a_2+a_3=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+a_3=-a_1+2a_2
+\]</span></p>
+<p>بردار دوم:</p>
+<p><span class="math-display" dir="ltr">\[
+n_2=(-1,2,0,-2,1)
+\]</span></p>
+<p>به این معناست:</p>
+<p><span class="math-display" dir="ltr">\[
+-a_1+2a_2-2a_4+a_5=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+a_5=a_1-2a_2+2a_4
+\]</span></p>
+<p>بنابراین فضای پوچ تمام روابط وابستگی خطی میان ستون‌های ماتریس را رمزگذاری می‌کند.</p>
+<hr/>
+<h3 id="sub-8">۶.۳. مثال دیگر جزوه: فضای پوچ یک ماتریس با یک متغیر آزاد</h3>
+<p>ماتریس زیر در بخش Null Space Basis جزوه مطرح شده است:</p>
+<p><span class="math-display" dir="ltr">\[
+A=
+\begin{bmatrix}
+0&amp;0&amp;0&amp;-1\\
+4&amp;-1&amp;1&amp;-1\\
+8&amp;-2&amp;3&amp;-1
+\end{bmatrix}
+\]</span></p>
+<p>از سطر اول:</p>
+<p><span class="math-display" dir="ltr">\[
+-x_4=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+x_4=0
+\]</span></p>
+<p>از سطر دوم:</p>
+<p><span class="math-display" dir="ltr">\[
+4x_1-x_2+x_3=0
+\]</span></p>
+<p>از سطر سوم:</p>
+<p><span class="math-display" dir="ltr">\[
+8x_1-2x_2+3x_3=0
+\]</span></p>
+<p>معادله‌ی سوم منهای دو برابر معادله‌ی دوم:</p>
+<p><span class="math-display" dir="ltr">\[
+x_3=0
+\]</span></p>
+<p>در نتیجه:</p>
+<p><span class="math-display" dir="ltr">\[
+4x_1-x_2=0
+\]</span></p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+x_2=4x_1
+\]</span></p>
+<p>متغیر آزاد را <span class="math-inline" dir="ltr">\(x_1=t\)</span> می‌گیریم:</p>
+<p><span class="math-display" dir="ltr">\[
+x=
+\begin{bmatrix}
+t\\4t\\0\\0
+\end{bmatrix}
+=
+t\begin{bmatrix}1\\4\\0\\0\end{bmatrix}
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+N(A)=\operatorname{Span}
+\left\{
+\begin{bmatrix}1\\4\\0\\0\end{bmatrix}
+\right\}
+}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{\dim N(A)=1}
+\]</span></p>
+<p>اگر با روش استاندارد Pivot پیش برویم، ستون‌های اول، سوم و چهارم Pivot هستند و <span class="math-inline" dir="ltr">\(x_2\)</span> متغیر آزاد است. در آن صورت پایه می‌تواند</p>
+<p><span class="math-display" dir="ltr">\[
+\left\{
+\begin{bmatrix}1/4\\1\\0\\0\end{bmatrix}
+\right\}
+\]</span></p>
+<p>باشد که با پایه‌ی قبلی معادل است.</p>
+<p>پایه‌ی فضای پوچ نیز، مثل هر پایه‌ی دیگری، یکتا نیست.</p>
+<hr/>
+</article><button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button><nav class="pager" aria-label="بخش قبلی و بعدی"><a class="page-link" href="../pages/07-05.html"><small>← بخش قبلی</small><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span></a><a class="page-link next" href="../pages/07-07.html"><small>بخش بعدی →</small><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span></a></nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه"><h2>در این صفحه</h2><a href="#sub-1">مثال هندسی</a><a href="#sub-2">۶.۱. چرا فضای پوچ همیشه زیرفضاست؟</a><a href="#sub-3">آیا مجموعه‌ی جواب‌های \(Ax=b\) نیز زیرفضاست؟</a><a href="#sub-4">۶.۲. پیدا کردن پایه‌ی Null Space</a><a href="#sub-5">ادامه‌ی مثال اصلی صفحه‌ی ۱۴ جزوه</a><a href="#sub-6">چرا این بردارها مستقل‌اند؟</a><a href="#sub-7">ارتباط با ستون‌های وابسته</a><a href="#sub-8">۶.۳. مثال دیگر جزوه: فضای پوچ یک ماتریس با یک متغیر آزاد</a></aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>

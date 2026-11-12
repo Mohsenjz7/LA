@@ -1,0 +1,174 @@
+<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بخش ۴ ـ بُعد فضای برداری (Dimension) | جبر خطی</title><link rel="stylesheet" href="../assets/style.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}catch(e){}</script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="../assets/mathjax/tex-svg.js"></script><script defer src="../assets/search-data.js"></script><script defer src="../assets/widgets.js"></script><script defer src="../assets/app.js"></script></head><body data-page="06-04" data-base="../"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="../index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها"><a class="nav-link " href="../index.html"  data-page="index"><span>آموزش جامع جبر خطی: استقلال خطی، پایه، بُعد و رتبه ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter" ><summary><span class="chapter-number">۵</span><span>استقلال خطی</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/05-01.html"  data-page="05-01"><span>بخش ۱ ـ پیش‌نیاز: ترکیب خطی و Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-02.html"  data-page="05-02"><span>بخش ۲ ـ انگیزه‌ی استقلال خطی: مسئله‌ی قیمت خانه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-03.html"  data-page="05-03"><span>بخش ۳ ـ تعریف دقیق استقلال و وابستگی خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-04.html"  data-page="05-04"><span>بخش ۴ ـ شهود هندسی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-05.html"  data-page="05-05"><span>بخش ۵ ـ روش ماتریسی تشخیص استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-06.html"  data-page="05-06"><span>بخش ۶ ـ قضیه‌های اصلی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-07.html"  data-page="05-07"><span>بخش ۷ ـ حذف بردارهای اضافی بدون تغییر Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-08.html"  data-page="05-08"><span>بخش ۸ ـ یکتایی ضرایب ترکیب خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-09.html"  data-page="05-09"><span>بخش ۹ ـ استقلال خطی توابع (Functions)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-10.html"  data-page="05-10"><span>بخش ۱۰ ـ استقلال خطی چندجمله‌ای‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-11.html"  data-page="05-11"><span>بخش ۱۱ ـ ارتباط استقلال خطی با جواب‌های دستگاه همگن</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-review.html"  data-page="05-review"><span>جمع‌بندی فصل پنجم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" open><summary><span class="chapter-number">۶</span><span>پایه و بُعد</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/06-01.html"  data-page="06-01"><span>بخش ۱ ـ شهود مفهوم پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-02.html"  data-page="06-02"><span>بخش ۲ ـ تعریف دقیق پایه (Basis)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-03.html"  data-page="06-03"><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link  active" href="../pages/06-04.html" aria-current="page" data-page="06-04"><span>بخش ۴ ـ بُعد فضای برداری (Dimension)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-05.html"  data-page="06-05"><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-06.html"  data-page="06-06"><span>بخش ۶ ـ پایه و بُعد زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-07.html"  data-page="06-07"><span>بخش ۷ ـ گسترش مجموعه‌ی مستقل به یک پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-08.html"  data-page="06-08"><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-09.html"  data-page="06-09"><span>بخش ۹ ـ جمع و اشتراک زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-10.html"  data-page="06-10"><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-11.html"  data-page="06-11"><span>بخش ۱۱ ـ دستگاه مختصات و پایه‌ی مرتب (Coordinates)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-12.html"  data-page="06-12"><span>بخش ۱۲ ـ تغییر پایه (مطلب تکمیلی)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-review.html"  data-page="06-review"><span>جمع‌بندی فصل ششم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۷</span><span>رتبه ماتریس</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/07-01.html"  data-page="07-01"><span>بخش ۱ ـ مرور فرم پلکانی و Pivot</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-02.html"  data-page="07-02"><span>بخش ۲ ـ فضای ستونی (Column Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-03.html"  data-page="07-03"><span>بخش ۳ ـ فضای سطری (Row Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-04.html"  data-page="07-04"><span>بخش ۴ ـ تأثیر عملیات سطری بر فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-05.html"  data-page="07-05"><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-06.html"  data-page="07-06"><span>بخش ۶ ـ فضای پوچ (Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-07.html"  data-page="07-07"><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-08.html"  data-page="07-08"><span>بخش ۸ ـ رتبه‌ی ستونی، رتبه‌ی سطری و Nullity</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-09.html"  data-page="07-09"><span>بخش ۹ ـ قضیه‌ی برابری رتبه‌ی سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-10.html"  data-page="07-10"><span>بخش ۱۰ ـ قضیه‌ی رتبه و پوچی (Rank–Nullity Theorem)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-11.html"  data-page="07-11"><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-12.html"  data-page="07-12"><span>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-13.html"  data-page="07-13"><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-14.html"  data-page="07-14"><span>بخش ۱۴ ـ شرط وجود جواب با فضای پوچ چپ</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-15.html"  data-page="07-15"><span>بخش ۱۵ ـ مثال جامع امتحانی با پارامتر</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-16.html"  data-page="07-16"><span>بخش ۱۶ ـ مثال اثباتی سطح بالا: چه زمانی \(A^TA\) وارون‌پذیر است؟</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-17.html"  data-page="07-17"><span>بخش ۱۷ ـ نکات ظریف و دام‌های پرتکرار امتحان</span><span class="done-dot" aria-hidden="true"></span></a></div></details><div class="nav-label">مرور نهایی</div><a class="nav-link " href="../pages/final-quiz.html"  data-page="final-quiz"><span>آزمون نهایی سه فصل</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/formula-sheet.html"  data-page="formula-sheet"><span>خلاصه‌ی نهایی هر سه فصل در یک نقشه‌ی مفهومی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/corrections.html"  data-page="corrections"><span>چند اصلاح علمی در خود جزوه‌ها</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter exercise-nav" ><summary><span class="chapter-number">✎</span><span>تمرین‌های تئوری</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/exercises.html"  data-page="exercises"><span>تمرین‌های تئوری</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/nhw2.html"  data-page="nhw2"><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/ht2.html"  data-page="ht2"><span>حل تمرین تئوری دوم (HT2) — ۶ سؤال</span><span class="done-dot" aria-hidden="true"></span></a></div></details></nav></aside><main id="lesson"><div class="breadcrumb"><a href="../index.html">خانه</a><span> / </span><span>پایه و بُعد</span></div><div class="lesson-header"><div class="eyebrow">فصل ۶ · درس</div><h1>بخش ۴ ـ بُعد فضای برداری (Dimension)</h1><div class="meta">صفحه ۱۶ از ۴۸ · ۳ دقیقه مطالعه تقریبی</div></div><article class="article"><p>بُعد یک فضای برداری متناهی، تعداد بردارهای موجود در یک پایه‌ی آن فضاست.</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{\dim(V)=|B|}
+\]</span></p>
+<p>البته بلافاصله یک سؤال پیش می‌آید:</p>
+<p>اگر یک فضا چند پایه‌ی مختلف داشته باشد، آیا ممکن است تعداد بردارهای پایه‌ها متفاوت باشد؟</p>
+<p>اگر چنین چیزی ممکن بود، مفهوم بُعد عملاً بی‌معنا می‌شد.</p>
+<p>جزوه برای حل این مشکل چند قضیه‌ی اساسی مطرح کرده است. <a href="../sources/6-Bases%20and%20Dimension.pdf#page=15">منبع</a></p>
+<h3 id="sub-1">۴.۱. قضیه اول: تعداد بردارهای مستقل از تعداد مولدها بیشتر نمی‌شود</h3>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+V=\operatorname{Span}\{x_1,\ldots,x_m\}
+\]</span></p>
+<p>آن‌گاه هر مجموعه‌ی مستقل در <span class="math-inline" dir="ltr">\(V\)</span> حداکثر <span class="math-inline" dir="ltr">\(m\)</span> عضو دارد.</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+\text{Number of LI vectors}
+\leq
+\text{Number of spanning vectors}
+}
+\]</span></p>
+<h3 id="sub-2">اثبات دقیق</h3>
+<p>فرض کن برخلاف قضیه، <span class="math-inline" dir="ltr">\(n&gt;m\)</span> بردار مستقل داشته باشیم:</p>
+<p><span class="math-display" dir="ltr">\[
+y_1,\ldots,y_n
+\]</span></p>
+<p>چون <span class="math-inline" dir="ltr">\(x_1,\ldots,x_m\)</span> مولد <span class="math-inline" dir="ltr">\(V\)</span> هستند، برای هر <span class="math-inline" dir="ltr">\(y_j\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+y_j=\sum_{i=1}^m a_{ij}x_i
+\]</span></p>
+<p>ماتریس ضرایب را تعریف می‌کنیم:</p>
+<p><span class="math-display" dir="ltr">\[
+A=
+\begin{bmatrix}
+a_{11}&amp;\cdots&amp;a_{1n}\\
+\vdots&amp;&amp;\vdots\\
+a_{m1}&amp;\cdots&amp;a_{mn}
+\end{bmatrix}
+\]</span></p>
+<p>به دلیل <span class="math-inline" dir="ltr">\(n&gt;m\)</span>، دستگاه همگن</p>
+<p><span class="math-display" dir="ltr">\[
+Ac=0
+\]</span></p>
+<p>جواب غیربدیهی دارد.</p>
+<p>پس برای یک <span class="math-inline" dir="ltr">\(c\neq0\)</span>:</p>
+<p><span class="math-display" dir="ltr">\[
+\begin{aligned}
+\sum_{j=1}^{n}c_jy_j
+&amp;=\sum_{j=1}^{n}c_j
+\left(\sum_{i=1}^{m}a_{ij}x_i\right)\\
+&amp;=\sum_{i=1}^{m}
+\left(\sum_{j=1}^{n}a_{ij}c_j\right)x_i\\
+&amp;=0
+\end{aligned}
+\]</span></p>
+<p>این یک رابطه‌ی وابستگی غیربدیهی بین <span class="math-inline" dir="ltr">\(y_j\)</span>هاست.</p>
+<p>تناقض.</p>
+<p>پس:</p>
+<p><span class="math-display" dir="ltr">\[
+n\leq m
+\]</span></p>
+<p>نکته‌ی اثباتی: لازم نیست <span class="math-inline" dir="ltr">\(x_i\)</span>ها مستقل باشند. ما دستگاه <span class="math-inline" dir="ltr">\(Ac=0\)</span> را به‌عنوان یک شرط کافی برای صفر شدن ترکیب انتخاب کرده‌ایم.</p>
+<hr/>
+<h3 id="sub-3">۴.۲. قضیه دوم: تمام پایه‌های یک فضا تعداد اعضای یکسان دارند</h3>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+B_1=\{x_1,\ldots,x_m\}
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+B_2=\{y_1,\ldots,y_n\}
+\]</span></p>
+<p>هر دو پایه‌ی <span class="math-inline" dir="ltr">\(V\)</span> باشند.</p>
+<p>چون <span class="math-inline" dir="ltr">\(B_1\)</span> پوشاست و <span class="math-inline" dir="ltr">\(B_2\)</span> مستقل:</p>
+<p><span class="math-display" dir="ltr">\[
+n\leq m
+\]</span></p>
+<p>چون <span class="math-inline" dir="ltr">\(B_2\)</span> پوشاست و <span class="math-inline" dir="ltr">\(B_1\)</span> مستقل:</p>
+<p><span class="math-display" dir="ltr">\[
+m\leq n
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{m=n}
+\]</span></p>
+<p>این دقیقاً دلیل معتبر بودن تعریف بُعد است.</p>
+<p>پس اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(V)=5
+\]</span></p>
+<p>هر پایه‌ی <span class="math-inline" dir="ltr">\(V\)</span> دقیقاً پنج بردار دارد؛ نه چهار و نه شش.</p>
+<hr/>
+<h3 id="sub-4">۴.۳. قضیه سوم: مقایسه‌ی تعداد بردارها با بُعد</h3>
+<p>فرض کن:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(V)=d
+\]</span></p>
+<p>آن‌گاه:</p>
+<p>اگر مجموعه‌ای بیش از <span class="math-inline" dir="ltr">\(d\)</span> بردار داشته باشد، قطعاً وابسته است.</p>
+<p>اگر مجموعه‌ای کمتر از <span class="math-inline" dir="ltr">\(d\)</span> بردار داشته باشد، نمی‌تواند تمام <span class="math-inline" dir="ltr">\(V\)</span> را بپوشاند.</p>
+<p>اگر مجموعه دقیقاً <span class="math-inline" dir="ltr">\(d\)</span> بردار داشته باشد، استقلال و پوشش معادل می‌شوند.</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+|S|=d
+\implies
+\big(S\text{ LI}\iff S\text{ spans }V\big)
+}
+\]</span></p>
+<p>مثلاً در یک فضای پنج‌بُعدی:</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th style="text-align:right">تعداد بردار</th>
+<th>مستقل بودن</th>
+<th>پوشش تمام فضا</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">3</td>
+<td>ممکن</td>
+<td>غیرممکن</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>ممکن</td>
+<td>ممکن؛ معادل استقلال</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>غیرممکن</td>
+<td>ممکن</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sub-5">کاربرد بسیار مهم امتحانی</h3>
+<p>اگر بخواهیم ثابت کنیم سه بردار، پایه‌ی <span class="math-inline" dir="ltr">\(\mathbb R^3\)</span> هستند، کافی است فقط یکی از این دو را ثابت کنیم:</p>
+<ul>
+<li>سه بردار مستقل‌اند.</li>
+<li>سه بردار تمام <span class="math-inline" dir="ltr">\(\mathbb R^3\)</span> را می‌پوشانند.</li>
+</ul>
+<p>چون تعداد بردارها دقیقاً برابر بُعد فضاست، شرط دیگر خودبه‌خود نتیجه می‌شود.</p>
+<h3 id="sub-6">مثال سطح بالا</h3>
+<p>آیا مجموعه‌ی زیر پایه‌ی <span class="math-inline" dir="ltr">\(P_3\)</span> است؟</p>
+<p><span class="math-display" dir="ltr">\[
+B=\{1+x,\ x+x^2,\ x^2+x^3,\ x^3\}
+\]</span></p>
+<p>می‌دانیم:</p>
+<p><span class="math-display" dir="ltr">\[
+\dim(P_3)=4
+\]</span></p>
+<p>چهار چندجمله‌ای داریم.</p>
+<p>ماتریس ضرایب در پایه‌ی استاندارد:</p>
+<p><span class="math-display" dir="ltr">\[
+A=
+\begin{bmatrix}
+1&amp;0&amp;0&amp;0\\
+1&amp;1&amp;0&amp;0\\
+0&amp;1&amp;1&amp;0\\
+0&amp;0&amp;1&amp;1
+\end{bmatrix}
+\]</span></p>
+<p>این ماتریس مثلثی پایین است.</p>
+<p><span class="math-display" dir="ltr">\[
+\det(A)=1
+\]</span></p>
+<p>پس ستون‌ها مستقل‌اند.</p>
+<p>چون دقیقاً چهار بردار مستقل در فضای چهاربُعدی داریم:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{B\text{ is a basis of }P_3}
+\]</span></p>
+<p>دیگر لازم نیست جداگانه تمام چندجمله‌ای‌های <span class="math-inline" dir="ltr">\(P_3\)</span> را با آن‌ها بسازیم.</p>
+<hr/>
+</article><button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button><nav class="pager" aria-label="بخش قبلی و بعدی"><a class="page-link" href="../pages/06-03.html"><small>← بخش قبلی</small><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span></a><a class="page-link next" href="../pages/06-05.html"><small>بخش بعدی →</small><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span></a></nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه"><h2>در این صفحه</h2><a href="#sub-1">۴.۱. قضیه اول: تعداد بردارهای مستقل از تعداد مولدها بیشتر نمی‌شود</a><a href="#sub-2">اثبات دقیق</a><a href="#sub-3">۴.۲. قضیه دوم: تمام پایه‌های یک فضا تعداد اعضای یکسان دارند</a><a href="#sub-4">۴.۳. قضیه سوم: مقایسه‌ی تعداد بردارها با بُعد</a><a href="#sub-5">کاربرد بسیار مهم امتحانی</a><a href="#sub-6">مثال سطح بالا</a></aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>

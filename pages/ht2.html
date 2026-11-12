@@ -1,0 +1,201 @@
+<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>حل تمرین تئوری دوم (HT2) — ۶ سؤال | جبر خطی</title><link rel="stylesheet" href="../assets/style.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}catch(e){}</script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="../assets/mathjax/tex-svg.js"></script><script defer src="../assets/search-data.js"></script><script defer src="../assets/widgets.js"></script><script defer src="../assets/app.js"></script></head><body data-page="ht2" data-base="../"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="../index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها"><a class="nav-link " href="../index.html"  data-page="index"><span>آموزش جامع جبر خطی: استقلال خطی، پایه، بُعد و رتبه ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter" ><summary><span class="chapter-number">۵</span><span>استقلال خطی</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/05-01.html"  data-page="05-01"><span>بخش ۱ ـ پیش‌نیاز: ترکیب خطی و Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-02.html"  data-page="05-02"><span>بخش ۲ ـ انگیزه‌ی استقلال خطی: مسئله‌ی قیمت خانه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-03.html"  data-page="05-03"><span>بخش ۳ ـ تعریف دقیق استقلال و وابستگی خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-04.html"  data-page="05-04"><span>بخش ۴ ـ شهود هندسی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-05.html"  data-page="05-05"><span>بخش ۵ ـ روش ماتریسی تشخیص استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-06.html"  data-page="05-06"><span>بخش ۶ ـ قضیه‌های اصلی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-07.html"  data-page="05-07"><span>بخش ۷ ـ حذف بردارهای اضافی بدون تغییر Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-08.html"  data-page="05-08"><span>بخش ۸ ـ یکتایی ضرایب ترکیب خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-09.html"  data-page="05-09"><span>بخش ۹ ـ استقلال خطی توابع (Functions)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-10.html"  data-page="05-10"><span>بخش ۱۰ ـ استقلال خطی چندجمله‌ای‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-11.html"  data-page="05-11"><span>بخش ۱۱ ـ ارتباط استقلال خطی با جواب‌های دستگاه همگن</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-review.html"  data-page="05-review"><span>جمع‌بندی فصل پنجم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۶</span><span>پایه و بُعد</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/06-01.html"  data-page="06-01"><span>بخش ۱ ـ شهود مفهوم پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-02.html"  data-page="06-02"><span>بخش ۲ ـ تعریف دقیق پایه (Basis)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-03.html"  data-page="06-03"><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-04.html"  data-page="06-04"><span>بخش ۴ ـ بُعد فضای برداری (Dimension)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-05.html"  data-page="06-05"><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-06.html"  data-page="06-06"><span>بخش ۶ ـ پایه و بُعد زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-07.html"  data-page="06-07"><span>بخش ۷ ـ گسترش مجموعه‌ی مستقل به یک پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-08.html"  data-page="06-08"><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-09.html"  data-page="06-09"><span>بخش ۹ ـ جمع و اشتراک زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-10.html"  data-page="06-10"><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-11.html"  data-page="06-11"><span>بخش ۱۱ ـ دستگاه مختصات و پایه‌ی مرتب (Coordinates)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-12.html"  data-page="06-12"><span>بخش ۱۲ ـ تغییر پایه (مطلب تکمیلی)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-review.html"  data-page="06-review"><span>جمع‌بندی فصل ششم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۷</span><span>رتبه ماتریس</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/07-01.html"  data-page="07-01"><span>بخش ۱ ـ مرور فرم پلکانی و Pivot</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-02.html"  data-page="07-02"><span>بخش ۲ ـ فضای ستونی (Column Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-03.html"  data-page="07-03"><span>بخش ۳ ـ فضای سطری (Row Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-04.html"  data-page="07-04"><span>بخش ۴ ـ تأثیر عملیات سطری بر فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-05.html"  data-page="07-05"><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-06.html"  data-page="07-06"><span>بخش ۶ ـ فضای پوچ (Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-07.html"  data-page="07-07"><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-08.html"  data-page="07-08"><span>بخش ۸ ـ رتبه‌ی ستونی، رتبه‌ی سطری و Nullity</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-09.html"  data-page="07-09"><span>بخش ۹ ـ قضیه‌ی برابری رتبه‌ی سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-10.html"  data-page="07-10"><span>بخش ۱۰ ـ قضیه‌ی رتبه و پوچی (Rank–Nullity Theorem)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-11.html"  data-page="07-11"><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-12.html"  data-page="07-12"><span>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-13.html"  data-page="07-13"><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-14.html"  data-page="07-14"><span>بخش ۱۴ ـ شرط وجود جواب با فضای پوچ چپ</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-15.html"  data-page="07-15"><span>بخش ۱۵ ـ مثال جامع امتحانی با پارامتر</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-16.html"  data-page="07-16"><span>بخش ۱۶ ـ مثال اثباتی سطح بالا: چه زمانی \(A^TA\) وارون‌پذیر است؟</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-17.html"  data-page="07-17"><span>بخش ۱۷ ـ نکات ظریف و دام‌های پرتکرار امتحان</span><span class="done-dot" aria-hidden="true"></span></a></div></details><div class="nav-label">مرور نهایی</div><a class="nav-link " href="../pages/final-quiz.html"  data-page="final-quiz"><span>آزمون نهایی سه فصل</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/formula-sheet.html"  data-page="formula-sheet"><span>خلاصه‌ی نهایی هر سه فصل در یک نقشه‌ی مفهومی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/corrections.html"  data-page="corrections"><span>چند اصلاح علمی در خود جزوه‌ها</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter exercise-nav" open><summary><span class="chapter-number">✎</span><span>تمرین‌های تئوری</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/exercises.html"  data-page="exercises"><span>تمرین‌های تئوری</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/nhw2.html"  data-page="nhw2"><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link  active" href="../pages/ht2.html" aria-current="page" data-page="ht2"><span>حل تمرین تئوری دوم (HT2) — ۶ سؤال</span><span class="done-dot" aria-hidden="true"></span></a></div></details></nav></aside><main id="lesson"><div class="breadcrumb"><a href="../index.html">خانه</a><span> / </span><span>تمرین‌های تئوری</span></div><div class="lesson-header"><div class="eyebrow">تمرین‌های تئوری · پاییز ۱۴۰۵</div><h1>حل تمرین تئوری دوم (HT2) — ۶ سؤال</h1><div class="meta">صفحه ۴۸ از ۴۸ · ۱۲ دقیقه مطالعه تقریبی</div></div><article class="article"><p>پاسخ‌ها حل تشریحی مستقل هستند و همه‌ی قسمت‌های سؤال‌ها را پوشش می‌دهند. تمام جواب‌ها در ابتدا بسته‌اند.</p><div class="exercise-actions"><a class="secondary" href="../sources/LA_HT2_Fall2026.pdf" target="_blank" rel="noopener">صورت سؤال اصلی (PDF) ↗</a></div><div class="exercise-jump" aria-label="رفتن به سؤال"><a href="#q-1">۱</a><a href="#q-2">۲</a><a href="#q-3">۳</a><a href="#q-4">۴</a><a href="#q-5">۵</a><a href="#q-6">۶</a></div><section class="exercise-question" id="q-1"><div class="question-kicker"><span>HT2 / ۱</span><span>۰ نمره · غیرتحویلی</span></div><h2>پرسش ۱ — صفر بودن تبدیل روی تمام بردارها</h2><div class="question-body"><p>فرض کنید <span class="math-inline" dir="ltr">\(A\in M_n(\mathbb R)\)</span> باشد و به ازای هر <span class="math-inline" dir="ltr">\(v\in\mathbb R^n\)</span> داشته باشیم <span class="math-inline" dir="ltr">\(Av=0\)</span>. ثابت کنید <span class="math-inline" dir="ltr">\(A=0\)</span>.</p>
+</div><details class="exercise-answer" id="answer-1"><summary><span class="answer-label"><span class="closed-label">نمایش پاسخ تشریحی</span><span class="open-label">پنهان کردن پاسخ</span></span><span class="answer-chevron" aria-hidden="true">⌄</span></summary><div class="answer-body"><p><strong>ایده:</strong> ستون‌های ماتریس، خروجی‌های آن روی بردارهای پایه‌ی استاندارد هستند.</p>
+<p>ماتریس را به شکل <span class="math-inline" dir="ltr">\(A=[a_1\;a_2\;\cdots\;a_n]\)</span> بنویسید. برای هر بردار استاندارد <span class="math-inline" dir="ltr">\(e_j\)</span> داریم:
+<span class="math-display" dir="ltr">\[
+Ae_j=a_j.
+\]</span>
+از فرض، چون <span class="math-inline" dir="ltr">\(e_j\in\mathbb R^n\)</span>، داریم <span class="math-inline" dir="ltr">\(Ae_j=0\)</span>. پس <span class="math-inline" dir="ltr">\(a_j=0\)</span> برای تمام <span class="math-inline" dir="ltr">\(j=1,\ldots,n\)</span>. بنابراین تمام ستون‌ها صفرند و:
+<span class="math-display" dir="ltr">\[
+\boxed{A=0.}
+\]</span>
+<strong>راه دیگر:</strong> <span class="math-inline" dir="ltr">\(N(A)=\mathbb R^n\)</span>، پس <span class="math-inline" dir="ltr">\(\dim N(A)=n\)</span>. با قضیه‌ی رتبه و پوچی، <span class="math-inline" dir="ltr">\(\operatorname{rank}(A)=n-n=0\)</span>، و تنها ماتریس با رتبه‌ی صفر، ماتریس صفر است.</p>
+<p class="answer-source">حل تشریحی مستقل بر اساس صورت سؤال HT2.</p></div></details></section><section class="exercise-question" id="q-2"><div class="question-kicker"><span>HT2 / ۲</span><span>۰ نمره · غیرتحویلی</span></div><h2>پرسش ۲ — پایه‌ی خارج از زیرفضا و یکتایی مکمل</h2><div class="question-body"><p>فرض کنید <span class="math-inline" dir="ltr">\(V\)</span> یک فضای خطی متناهی‌البعد باشد.</p>
+<p><strong>الف)</strong> اگر <span class="math-inline" dir="ltr">\(W\subsetneq V\)</span> زیرفضا باشد، ثابت کنید <span class="math-inline" dir="ltr">\(V\)</span> پایه‌ای دارد که اعضای این پایه در <span class="math-inline" dir="ltr">\(W\)</span> نیستند.</p>
+<p><strong>ب)</strong> فرض کنید <span class="math-inline" dir="ltr">\(W_1,W_2\)</span> زیرفضاهایی از <span class="math-inline" dir="ltr">\(V\)</span> باشند به‌طوری‌که <span class="math-inline" dir="ltr">\(W_1\ne V\)</span> و <span class="math-inline" dir="ltr">\(W_2\not\subseteq W_1\)</span>. ثابت کنید <span class="math-inline" dir="ltr">\(W_2\)</span> پایه‌ای دارد که می‌تواند به پایه‌ای از <span class="math-inline" dir="ltr">\(V\)</span> گسترش یابد که هیچ‌کدام از اعضای این پایه در <span class="math-inline" dir="ltr">\(W_1\)</span> نباشند.</p>
+<p><strong>ج)</strong> فرض کنید <span class="math-inline" dir="ltr">\(W_1\subseteq V\)</span> زیرفضاست. اگر زیرفضای یکتای <span class="math-inline" dir="ltr">\(W_2\)</span> موجود باشد به‌طوری‌که <span class="math-inline" dir="ltr">\(W_1\oplus W_2=V\)</span>، ثابت کنید <span class="math-inline" dir="ltr">\(W_1=\{0\}\)</span> یا <span class="math-inline" dir="ltr">\(W_1=V\)</span>.</p>
+</div><details class="exercise-answer" id="answer-2"><summary><span class="answer-label"><span class="closed-label">نمایش پاسخ تشریحی</span><span class="open-label">پنهان کردن پاسخ</span></span><span class="answer-chevron" aria-hidden="true">⌄</span></summary><div class="answer-body"><h3 id="q-2-sub-1">الف) ساختن پایه‌ای که هیچ عضو آن در W نباشد</h3>
+<p>چون <span class="math-inline" dir="ltr">\(W\subsetneq V\)</span>، اگر <span class="math-inline" dir="ltr">\(\dim W=k\)</span> و <span class="math-inline" dir="ltr">\(\dim V=n\)</span>، داریم <span class="math-inline" dir="ltr">\(k&lt;n\)</span>. پایه‌ی <span class="math-inline" dir="ltr">\(W\)</span> را به صورت <span class="math-inline" dir="ltr">\(w_1,\ldots,w_k\)</span> انتخاب کنید و آن را به پایه‌ی <span class="math-inline" dir="ltr">\(V\)</span> گسترش دهید:
+<span class="math-display" dir="ltr">\[
+\mathcal B=(w_1,\ldots,w_k,u_1,\ldots,u_{n-k}).
+\]</span>
+تمام <span class="math-inline" dir="ltr">\(u_j\)</span>ها خارج از <span class="math-inline" dir="ltr">\(W\)</span> هستند؛ اگر یکی از آن‌ها در <span class="math-inline" dir="ltr">\(W\)</span> بود، ترکیب خطی <span class="math-inline" dir="ltr">\(w_i\)</span>ها می‌شد و پایه وابسته می‌شد.</p>
+<p>حالا با استفاده از <span class="math-inline" dir="ltr">\(u_1\)</span> پایه‌ی جدید زیر را می‌سازیم:
+<span class="math-display" dir="ltr">\[
+\mathcal B'=(w_1+u_1,\ldots,w_k+u_1,u_1,\ldots,u_{n-k}).
+\]</span>
+هیچ <span class="math-inline" dir="ltr">\(w_i+u_1\)</span> در <span class="math-inline" dir="ltr">\(W\)</span> نیست؛ زیرا اگر در <span class="math-inline" dir="ltr">\(W\)</span> باشد، <span class="math-inline" dir="ltr">\(u_1=(w_i+u_1)-w_i\in W\)</span>، که خلاف انتخاب <span class="math-inline" dir="ltr">\(u_1\)</span> است.</p>
+<p>برای اثبات پایه بودن، توجه کنید هر <span class="math-inline" dir="ltr">\(w_i=(w_i+u_1)-u_1\)</span> از اعضای <span class="math-inline" dir="ltr">\(\mathcal B'\)</span> ساخته می‌شود. همه‌ی <span class="math-inline" dir="ltr">\(u_j\)</span>ها هم عضو <span class="math-inline" dir="ltr">\(\mathcal B'\)</span> هستند. پس <span class="math-inline" dir="ltr">\(\mathcal B'\)</span> تمام پایه‌ی اولیه و در نتیجه کل <span class="math-inline" dir="ltr">\(V\)</span> را می‌پوشاند. چون <span class="math-inline" dir="ltr">\(n\)</span> عضو دارد، پایه است. برای <span class="math-inline" dir="ltr">\(W=\{0\}\)</span> نیز همین ساختار با فهرست تهی <span class="math-inline" dir="ltr">\(w_i\)</span>ها برقرار است.
+<span class="math-display" dir="ltr">\[
+\boxed{\mathcal B'\cap W=\varnothing.}
+\]</span></p>
+<h3 id="q-2-sub-2">ب) انتخاب پایه‌ی W2 و گسترش آن به پایه‌ی V</h3>
+<p>ابتدا زیرفضای <span class="math-inline" dir="ltr">\(U=W_1\cap W_2\)</span> را در فضای <span class="math-inline" dir="ltr">\(W_2\)</span> در نظر بگیرید. از <span class="math-inline" dir="ltr">\(W_2\not\subseteq W_1\)</span> نتیجه می‌گیریم <span class="math-inline" dir="ltr">\(U\subsetneq W_2\)</span>.</p>
+<p>طبق قسمت الف که این بار روی <span class="math-inline" dir="ltr">\(W_2\)</span> اعمال می‌شود، پایه‌ای <span class="math-inline" dir="ltr">\(S=(s_1,\ldots,s_r)\)</span> از <span class="math-inline" dir="ltr">\(W_2\)</span> وجود دارد که هیچ عضو آن در <span class="math-inline" dir="ltr">\(U\)</span> نیست. چون <span class="math-inline" dir="ltr">\(s_i\in W_2\)</span>، اگر <span class="math-inline" dir="ltr">\(s_i\in W_1\)</span> بود، در <span class="math-inline" dir="ltr">\(U\)</span> قرار می‌گرفت. پس همه‌ی <span class="math-inline" dir="ltr">\(s_i\)</span>ها خارج از <span class="math-inline" dir="ltr">\(W_1\)</span> هستند. از فرض، <span class="math-inline" dir="ltr">\(W_2\ne\{0\}\)</span>، بنابراین <span class="math-inline" dir="ltr">\(r\geq1\)</span> و <span class="math-inline" dir="ltr">\(s_1\)</span> موجود است.</p>
+<p>این پایه را به پایه‌ی <span class="math-inline" dir="ltr">\(V\)</span> گسترش دهید:
+<span class="math-display" dir="ltr">\[
+(s_1,\ldots,s_r,t_1,\ldots,t_{n-r}).
+\]</span>
+برای هر <span class="math-inline" dir="ltr">\(t_j\)</span> تعریف می‌کنیم:
+<span class="math-display" dir="ltr">\[
+ t'_j=\begin{cases}t_j,&amp;t_j\notin W_1,\\t_j+s_1,&amp;t_j\in W_1.\end{cases}
+\]</span>
+در حالت دوم <span class="math-inline" dir="ltr">\(t_j+s_1\notin W_1\)</span>، زیرا اگر در <span class="math-inline" dir="ltr">\(W_1\)</span> باشد، با کم کردن <span class="math-inline" dir="ltr">\(t_j\in W_1\)</span> نتیجه می‌شود <span class="math-inline" dir="ltr">\(s_1\in W_1\)</span>، که تناقض است.</p>
+<p>پایه‌ی جدید <span class="math-inline" dir="ltr">\((s_1,\ldots,s_r,t'_1,\ldots,t'_{n-r})\)</span> تمام بردارهای پایه‌ی قبلی را می‌سازد (با کم کردن <span class="math-inline" dir="ltr">\(s_1\)</span> در موارد لازم)، و تعداد اعضایش <span class="math-inline" dir="ltr">\(n\)</span> است. پس پایه‌ی <span class="math-inline" dir="ltr">\(V\)</span> است؛ پایه‌ی <span class="math-inline" dir="ltr">\(S\)</span> از <span class="math-inline" dir="ltr">\(W_2\)</span> را بدون تغییر در خود دارد و هیچ عضوش در <span class="math-inline" dir="ltr">\(W_1\)</span> نیست.</p>
+<h3 id="q-2-sub-3">ج) اگر مکمل یکتا باشد، زیرفضا صفر یا کل فضاست</h3>
+<p>فرض خلاف کنید <span class="math-inline" dir="ltr">\(\{0\}\subsetneq W_1\subsetneq V\)</span>. طبق قضیه‌ی گسترش پایه، مکملی مانند <span class="math-inline" dir="ltr">\(W_2\)</span> وجود دارد که <span class="math-inline" dir="ltr">\(V=W_1\oplus W_2\)</span>. هر دو فضا بُعد مثبت دارند.</p>
+<p>یک بردار ناصفر <span class="math-inline" dir="ltr">\(w\in W_1\)</span> و پایه‌ی <span class="math-inline" dir="ltr">\((u_1,\ldots,u_s)\)</span> از <span class="math-inline" dir="ltr">\(W_2\)</span> انتخاب کنید. تعریف کنید:
+<span class="math-display" dir="ltr">\[
+W'_2=\operatorname{span}(u_1+w,u_2,\ldots,u_s).
+\]</span>
+نشان می‌دهیم <span class="math-inline" dir="ltr">\(W'_2\)</span> نیز مکمل <span class="math-inline" dir="ltr">\(W_1\)</span> است.</p>
+<p><strong>پوشش:</strong> تمام بردارهای <span class="math-inline" dir="ltr">\(W_2\)</span> در <span class="math-inline" dir="ltr">\(W_1+W'_2\)</span> قرار دارند، زیرا <span class="math-inline" dir="ltr">\(u_1=(u_1+w)-w\)</span> و سایر <span class="math-inline" dir="ltr">\(u_i\)</span>ها در <span class="math-inline" dir="ltr">\(W'_2\)</span> هستند. پس <span class="math-inline" dir="ltr">\(W_1+W'_2=V\)</span>.</p>
+<p><strong>اشتراک صفر:</strong> اگر <span class="math-inline" dir="ltr">\(x\in W_1\cap W'_2\)</span>، می‌توان نوشت:
+<span class="math-display" dir="ltr">\[
+ x=c_1(u_1+w)+\sum_{j=2}^{s}c_ju_j.
+\]</span>
+پس
+<span class="math-display" dir="ltr">\[
+ x-c_1w=\sum_{j=1}^{s}c_ju_j\in W_1\cap W_2=\{0\}.
+\]</span>
+استقلال <span class="math-inline" dir="ltr">\(u_1,\ldots,u_s\)</span> نتیجه می‌دهد همه‌ی <span class="math-inline" dir="ltr">\(c_j=0\)</span> و <span class="math-inline" dir="ltr">\(x=0\)</span>. بنابراین <span class="math-inline" dir="ltr">\(V=W_1\oplus W'_2\)</span>.</p>
+<p><strong>متفاوت بودن مکمل‌ها:</strong> اگر <span class="math-inline" dir="ltr">\(W'_2=W_2\)</span>، آنگاه <span class="math-inline" dir="ltr">\(u_1+w\in W_2\)</span> و <span class="math-inline" dir="ltr">\(u_1\in W_2\)</span>، پس <span class="math-inline" dir="ltr">\(w\in W_2\)</span>. اما <span class="math-inline" dir="ltr">\(w\ne0\)</span> و <span class="math-inline" dir="ltr">\(w\in W_1\)</span>، که با <span class="math-inline" dir="ltr">\(W_1\cap W_2=\{0\}\)</span> تناقض دارد.</p>
+<p>پس در حالت غیرصفر و حقیقی، دست‌کم دو مکمل متفاوت داریم. این با یکتایی ناسازگار است. بنابراین:
+<span class="math-display" dir="ltr">\[
+\boxed{W_1=\{0\}\quad\text{or}\quad W_1=V.}
+\]</span>
+در این دو حالت مکمل واقعاً یکتاست: برای <span class="math-inline" dir="ltr">\(W_1=\{0\}\)</span>، مکمل <span class="math-inline" dir="ltr">\(V\)</span> است و برای <span class="math-inline" dir="ltr">\(W_1=V\)</span>، مکمل <span class="math-inline" dir="ltr">\(\{0\}\)</span> است.</p>
+<p class="answer-source">حل تشریحی مستقل بر اساس صورت سؤال HT2.</p></div></details></section><section class="exercise-question" id="q-3"><div class="question-kicker"><span>HT2 / ۳</span><span>۰ نمره · غیرتحویلی</span></div><h2>پرسش ۳ — اشتراک هر n زیرفضا و اشتراک کل خانواده</h2><div class="question-body"><p>فرض کنید <span class="math-inline" dir="ltr">\(\{U_1,\ldots,U_p\}\)</span> خانواده‌ای از زیرفضاهای خطی متناهی‌البعد <span class="math-inline" dir="ltr">\(V\)</span> با بُعد <span class="math-inline" dir="ltr">\(n\)</span> هستند، به‌طوری‌که اشتراک هر <span class="math-inline" dir="ltr">\(n\)</span> از این زیرفضاها دارای بُعد حداقل یک باشد. نشان دهید:
+<span class="math-display" dir="ltr">\[
+\dim\left(\bigcap_{i=1}^{p}U_i\right)\geq1.
+\]</span></p>
+</div><details class="exercise-answer" id="answer-3"><summary><span class="answer-label"><span class="closed-label">نمایش پاسخ تشریحی</span><span class="open-label">پنهان کردن پاسخ</span></span><span class="answer-chevron" aria-hidden="true">⌄</span></summary><div class="answer-body"><p><strong>نکته‌ی لازم در صورت سؤال:</strong> برای اینکه فرض «اشتراک هر <span class="math-inline" dir="ltr">\(n\)</span> زیرفضا» معنا و اثر موردنظر را داشته باشد، فرض می‌کنیم <span class="math-inline" dir="ltr">\(p\geq n\geq1\)</span>. اگر <span class="math-inline" dir="ltr">\(p&lt;n\)</span>، این فرض تهی است و گزاره لزوماً درست نیست؛ مثلاً <span class="math-inline" dir="ltr">\(n=2,p=1,U_1=\{0\}\)</span>.</p>
+<p><strong>اثبات با برهان خلف و کاهش بُعد.</strong> فرض کنید:
+<span class="math-display" dir="ltr">\[
+\bigcap_{i=1}^{p}U_i=\{0\}.
+\]</span>
+می‌خواهیم نشان دهیم حداکثر <span class="math-inline" dir="ltr">\(n\)</span> زیرفضا از همین خانواده را می‌توان انتخاب کرد که اشتراکشان صفر باشد.</p>
+<p>از <span class="math-inline" dir="ltr">\(X_0=V\)</span> شروع می‌کنیم. اگر <span class="math-inline" dir="ltr">\(X_j\ne\{0\}\)</span>، به دلیل فرض اشتراک کل برابر صفر، نمی‌تواند در تمام <span class="math-inline" dir="ltr">\(U_i\)</span>ها قرار داشته باشد. پس اندیسی <span class="math-inline" dir="ltr">\(i_{j+1}\)</span> وجود دارد که:
+<span class="math-display" dir="ltr">\[
+ X_j\not\subseteq U_{i_{j+1}}.
+\]</span>
+تعریف می‌کنیم:
+<span class="math-display" dir="ltr">\[
+ X_{j+1}=X_j\cap U_{i_{j+1}}.
+\]</span>
+این یک زیرفضای حقیقی <span class="math-inline" dir="ltr">\(X_j\)</span> است، بنابراین:
+<span class="math-display" dir="ltr">\[
+ \dim X_{j+1}&lt;\dim X_j.
+\]</span>
+در هر مرحله بُعد حداقل یک واحد کاهش پیدا می‌کند. چون <span class="math-inline" dir="ltr">\(\dim X_0=n\)</span>، بعد از حداکثر <span class="math-inline" dir="ltr">\(n\)</span> مرحله به <span class="math-inline" dir="ltr">\(X_k=\{0\}\)</span> می‌رسیم. در نتیجه برای اندیس‌های متمایز <span class="math-inline" dir="ltr">\(i_1,\ldots,i_k\)</span> با <span class="math-inline" dir="ltr">\(k\leq n\)</span> داریم:
+<span class="math-display" dir="ltr">\[
+U_{i_1}\cap\cdots\cap U_{i_k}=\{0\}.
+\]</span>
+اندیس‌ها متمایزند، زیرا <span class="math-inline" dir="ltr">\(X_j\)</span> از قبل در تمام زیرفضاهای انتخاب‌شده قرار دارد و انتخاب دوباره‌ی آن‌ها کاهش بُعد ایجاد نمی‌کند.</p>
+<p>اگر <span class="math-inline" dir="ltr">\(k&lt;n\)</span>، با توجه به <span class="math-inline" dir="ltr">\(p\geq n\)</span>، به این خانواده <span class="math-inline" dir="ltr">\(n-k\)</span> زیرفضای دیگر اضافه می‌کنیم. اشتراک جدید همچنان صفر است. پس خانواده‌ای از دقیقاً <span class="math-inline" dir="ltr">\(n\)</span> زیرفضا داریم که اشتراکشان بُعد صفر دارد. این با فرض سؤال تناقض دارد.</p>
+<p>بنابراین اشتراک کل نمی‌تواند صفر باشد و:
+<span class="math-display" dir="ltr">\[
+\boxed{\dim\left(\bigcap_{i=1}^{p}U_i\right)\geq1.}
+\]</span></p>
+<p class="answer-source">حل تشریحی مستقل بر اساس صورت سؤال HT2.</p></div></details></section><section class="exercise-question" id="q-4"><div class="question-kicker"><span>HT2 / ۴</span><span>۰ نمره · غیرتحویلی</span></div><h2>پرسش ۴ — ماتریس پوچ‌توان و وابستگی ستون‌ها</h2><div class="question-body"><p>فرض کنید <span class="math-inline" dir="ltr">\(A\)</span> یک ماتریس پوچ‌توان باشد، به این معنی که عدد طبیعی <span class="math-inline" dir="ltr">\(m\)</span> (مثبت) وجود دارد به‌طوری‌که <span class="math-inline" dir="ltr">\(A^m=0\)</span>. ثابت کنید ستون‌های <span class="math-inline" dir="ltr">\(A\)</span> وابسته‌ی خطی هستند.</p>
+</div><details class="exercise-answer" id="answer-4"><summary><span class="answer-label"><span class="closed-label">نمایش پاسخ تشریحی</span><span class="open-label">پنهان کردن پاسخ</span></span><span class="answer-chevron" aria-hidden="true">⌄</span></summary><div class="answer-body"><p><strong>اثبات اول: با وارون‌پذیری.</strong> ماتریس پوچ‌توان مربعی است. فرض کنید برخلاف ادعا ستون‌های <span class="math-inline" dir="ltr">\(A\in M_n(\mathbb R)\)</span> مستقل‌اند (برای <span class="math-inline" dir="ltr">\(n\geq1\)</span>). پس <span class="math-inline" dir="ltr">\(A\)</span> وارون‌پذیر است و تمام توان‌های مثبت آن نیز وارون‌پذیرند:
+<span class="math-display" dir="ltr">\[
+ (A^m)^{-1}=(A^{-1})^m.
+\]</span>
+اما <span class="math-inline" dir="ltr">\(A^m=0\)</span> و ماتریس صفر وارون‌پذیر نیست. تناقض. بنابراین ستون‌ها وابسته‌اند.</p>
+<p><strong>اثبات دوم: ساخت یک بردار ناصفر در فضای پوچ.</strong> کوچک‌ترین عدد مثبت <span class="math-inline" dir="ltr">\(k\)</span> را در نظر بگیرید که <span class="math-inline" dir="ltr">\(A^k=0\)</span>. از کمینه بودن <span class="math-inline" dir="ltr">\(k\)</span>، داریم <span class="math-inline" dir="ltr">\(A^{k-1}\ne0\)</span> (اگر <span class="math-inline" dir="ltr">\(k=1\)</span>، <span class="math-inline" dir="ltr">\(A^0=I_n\ne0\)</span>). پس برداری <span class="math-inline" dir="ltr">\(v\)</span> وجود دارد که <span class="math-inline" dir="ltr">\(x=A^{k-1}v\ne0\)</span>. اکنون:
+<span class="math-display" dir="ltr">\[
+Ax=A^kv=0.
+\]</span>
+پس <span class="math-inline" dir="ltr">\(N(A)\)</span> عضو ناصفر دارد و از معادل بودن استقلال ستون‌ها با <span class="math-inline" dir="ltr">\(N(A)=\{0\}\)</span> نتیجه می‌گیریم:
+<span class="math-display" dir="ltr">\[
+\boxed{\text{Columns of }A\text{ are linearly dependent.}}
+\]</span></p>
+<p class="answer-source">حل تشریحی مستقل بر اساس صورت سؤال HT2.</p></div></details></section><section class="exercise-question" id="q-5"><div class="question-kicker"><span>HT2 / ۵</span><span>۰ نمره · غیرتحویلی</span></div><h2>پرسش ۵ — دو نامساوی رتبه‌ی جمع و حاصل‌ضرب</h2><div class="question-body"><p>فرض کنید <span class="math-inline" dir="ltr">\(A,B\in M_n(\mathbb R)\)</span> باشند. ثابت کنید:
+<span class="math-display" dir="ltr">\[
+\operatorname{rank}(A+B)\leq\operatorname{rank}(A)+\operatorname{rank}(B)\leq\operatorname{rank}(AB)+n.
+\]</span></p>
+</div><details class="exercise-answer" id="answer-5"><summary><span class="answer-label"><span class="closed-label">نمایش پاسخ تشریحی</span><span class="open-label">پنهان کردن پاسخ</span></span><span class="answer-chevron" aria-hidden="true">⌄</span></summary><div class="answer-body"><p><strong>نامساوی اول.</strong> برای هر <span class="math-inline" dir="ltr">\(x\in\mathbb R^n\)</span>:
+<span class="math-display" dir="ltr">\[
+(A+B)x=Ax+Bx\in C(A)+C(B).
+\]</span>
+پس <span class="math-inline" dir="ltr">\(C(A+B)\subseteq C(A)+C(B)\)</span>. از فرمول بُعد مجموع زیرفضاها:
+<span class="math-display" dir="ltr">\[
+\begin{aligned}
+\operatorname{rank}(A+B)&amp;\leq\dim(C(A)+C(B))\\
+&amp;=\operatorname{rank}(A)+\operatorname{rank}(B)-\dim(C(A)\cap C(B))\\
+&amp;\leq\operatorname{rank}(A)+\operatorname{rank}(B).
+\end{aligned}
+\]</span>
+<strong>نامساوی دوم.</strong> تبدیل خطی <span class="math-inline" dir="ltr">\(T:C(B)\to C(AB)\)</span> را با <span class="math-inline" dir="ltr">\(T(y)=Ay\)</span> تعریف می‌کنیم. این تبدیل پوشاست، زیرا هر عضو <span class="math-inline" dir="ltr">\(C(AB)\)</span> به شکل <span class="math-inline" dir="ltr">\(ABx\)</span> است و <span class="math-inline" dir="ltr">\(Bx\in C(B)\)</span>. هسته‌ی آن نیز برابر است با:
+<span class="math-display" dir="ltr">\[
+N(T)=C(B)\cap N(A).
+\]</span>
+طبق قضیه‌ی رتبه و پوچی:
+<span class="math-display" dir="ltr">\[
+\begin{aligned}
+\operatorname{rank}(AB)&amp;=\dim C(B)-\dim(C(B)\cap N(A))\\
+&amp;\geq\operatorname{rank}(B)-\dim N(A)\\
+&amp;=\operatorname{rank}(B)-(n-\operatorname{rank}(A)).
+\end{aligned}
+\]</span>
+پس <span class="math-inline" dir="ltr">\(\operatorname{rank}(A)+\operatorname{rank}(B)\leq\operatorname{rank}(AB)+n\)</span>. با کنار هم گذاشتن دو نتیجه:
+<span class="math-display" dir="ltr">\[
+\boxed{\operatorname{rank}(A+B)\leq\operatorname{rank}(A)+\operatorname{rank}(B)\leq\operatorname{rank}(AB)+n.}
+\]</span>
+نکته: قسمت دوم همان نامساوی سیلوستر (NHW2 سؤال ۷) در حالت ماتریس‌های مربع است.</p>
+<p class="answer-source">حل تشریحی مستقل بر اساس صورت سؤال HT2.</p></div></details></section><section class="exercise-question" id="q-6"><div class="question-kicker"><span>HT2 / ۶</span><span>۰ نمره · غیرتحویلی</span></div><h2>پرسش ۶ — رتبه‌ی تفاضل دو ماتریس خودتوان</h2><div class="question-body"><p>فرض کنید <span class="math-inline" dir="ltr">\(A,B\in M_n(\mathbb R)\)</span> باشند و <span class="math-inline" dir="ltr">\(A^2=A\)</span>، <span class="math-inline" dir="ltr">\(B^2=B\)</span>. ثابت کنید:
+<span class="math-display" dir="ltr">\[
+\operatorname{rank}(A-B)=\operatorname{rank}(A-AB)+\operatorname{rank}(B-AB).
+\]</span></p>
+</div><details class="exercise-answer" id="answer-6"><summary><span class="answer-label"><span class="closed-label">نمایش پاسخ تشریحی</span><span class="open-label">پنهان کردن پاسخ</span></span><span class="answer-chevron" aria-hidden="true">⌄</span></summary><div class="answer-body"><p><strong>ایده:</strong> به جای دست‌کاری عدد رتبه، فضای ستونی <span class="math-inline" dir="ltr">\(A-B\)</span> را به جمع مستقیم دو فضای ستونی سمت راست تجزیه می‌کنیم.</p>
+<p>بگذارید:
+<span class="math-display" dir="ltr">\[
+U=C(A-AB),\qquad W=C(B-AB).
+\]</span>
+<strong>گام اول: اثبات اینکه مجموع دو فضا دقیقاً فضای ستونی تفاضل است.</strong> چون <span class="math-inline" dir="ltr">\(B^2=B\)</span>، داریم:
+<span class="math-display" dir="ltr">\[
+\begin{aligned}
+(A-B)(I-B)&amp;=A-AB-B+B^2\\
+&amp;=A-AB,\\
+(A-B)B&amp;=AB-B^2=-(B-AB).
+\end{aligned}
+\]</span>
+هر ستون حاصل‌ضرب <span class="math-inline" dir="ltr">\((A-B)(I-B)\)</span> یا <span class="math-inline" dir="ltr">\((A-B)B\)</span> ترکیب خطی ستون‌های <span class="math-inline" dir="ltr">\(A-B\)</span> است. پس <span class="math-inline" dir="ltr">\(U,W\subseteq C(A-B)\)</span> و:
+<span class="math-display" dir="ltr">\[
+ U+W\subseteq C(A-B).
+\]</span>
+از سوی دیگر:
+<span class="math-display" dir="ltr">\[
+ A-B=(A-AB)-(B-AB).
+\]</span>
+پس برای هر <span class="math-inline" dir="ltr">\(x\)</span>، بردار <span class="math-inline" dir="ltr">\((A-B)x\)</span> مجموع عضوی از <span class="math-inline" dir="ltr">\(U\)</span> و عضوی از <span class="math-inline" dir="ltr">\(W\)</span> است. بنابراین:
+<span class="math-display" dir="ltr">\[
+ C(A-B)\subseteq U+W.
+\]</span>
+نتیجه: <span class="math-inline" dir="ltr">\(C(A-B)=U+W\)</span>.</p>
+<p><strong>گام دوم: اثبات اشتراک صفر.</strong> از <span class="math-inline" dir="ltr">\(A^2=A\)</span> نتیجه می‌شود:
+<span class="math-display" dir="ltr">\[
+ A(A-AB)=A^2-A^2B=A-AB.
+\]</span>
+پس برای هر <span class="math-inline" dir="ltr">\(u\in U\)</span>، داریم <span class="math-inline" dir="ltr">\(Au=u\)</span>. همچنین:
+<span class="math-display" dir="ltr">\[
+ A(B-AB)=AB-A^2B=0.
+\]</span>
+پس برای هر <span class="math-inline" dir="ltr">\(w\in W\)</span>، داریم <span class="math-inline" dir="ltr">\(Aw=0\)</span>. اگر <span class="math-inline" dir="ltr">\(z\in U\cap W\)</span>، هر دو رابطه برای آن برقرارند: <span class="math-inline" dir="ltr">\(Az=z\)</span> و <span class="math-inline" dir="ltr">\(Az=0\)</span>. بنابراین <span class="math-inline" dir="ltr">\(z=0\)</span>.
+<span class="math-display" dir="ltr">\[
+ U\cap W=\{0\}.
+\]</span>
+<strong>گام سوم: گرفتن بُعد.</strong> از دو گام قبلی:
+<span class="math-display" dir="ltr">\[
+ C(A-B)=U\oplus W.
+\]</span>
+پس:
+<span class="math-display" dir="ltr">\[
+\begin{aligned}
+\operatorname{rank}(A-B)&amp;=\dim C(A-B)\\
+&amp;=\dim U+\dim W\\
+&amp;=\operatorname{rank}(A-AB)+\operatorname{rank}(B-AB).
+\end{aligned}
+\]</span>
+قضیه ثابت شد. دقت کنید که در این اثبات هیچ فرضی مانند <span class="math-inline" dir="ltr">\(AB=BA\)</span> نیاز نبود؛ فقط خودتوان بودن هر دو ماتریس استفاده شد.</p>
+<p class="answer-source">حل تشریحی مستقل بر اساس صورت سؤال HT2.</p></div></details></section></article><nav class="pager" aria-label="بخش قبلی و بعدی"><a class="page-link" href="../pages/nhw2.html"><small>← بخش قبلی</small><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span></a></nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه"><h2>در این صفحه</h2><a href="#q-1">پرسش ۱ — صفر بودن تبدیل روی تمام بردارها</a><a href="#q-2">پرسش ۲ — پایه‌ی خارج از زیرفضا و یکتایی مکمل</a><a href="#q-3">پرسش ۳ — اشتراک هر n زیرفضا و اشتراک کل خانواده</a><a href="#q-4">پرسش ۴ — ماتریس پوچ‌توان و وابستگی ستون‌ها</a><a href="#q-5">پرسش ۵ — دو نامساوی رتبه‌ی جمع و حاصل‌ضرب</a><a href="#q-6">پرسش ۶ — رتبه‌ی تفاضل دو ماتریس خودتوان</a></aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>

@@ -1,0 +1,103 @@
+<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بخش ۱ ـ مرور فرم پلکانی و Pivot | جبر خطی</title><link rel="stylesheet" href="../assets/style.css"><script>try{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}catch(e){}</script><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="../assets/mathjax/tex-svg.js"></script><script defer src="../assets/search-data.js"></script><script defer src="../assets/widgets.js"></script><script defer src="../assets/app.js"></script></head><body data-page="07-01" data-base="../"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="../index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها"><a class="nav-link " href="../index.html"  data-page="index"><span>آموزش جامع جبر خطی: استقلال خطی، پایه، بُعد و رتبه ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter" ><summary><span class="chapter-number">۵</span><span>استقلال خطی</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/05-01.html"  data-page="05-01"><span>بخش ۱ ـ پیش‌نیاز: ترکیب خطی و Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-02.html"  data-page="05-02"><span>بخش ۲ ـ انگیزه‌ی استقلال خطی: مسئله‌ی قیمت خانه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-03.html"  data-page="05-03"><span>بخش ۳ ـ تعریف دقیق استقلال و وابستگی خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-04.html"  data-page="05-04"><span>بخش ۴ ـ شهود هندسی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-05.html"  data-page="05-05"><span>بخش ۵ ـ روش ماتریسی تشخیص استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-06.html"  data-page="05-06"><span>بخش ۶ ـ قضیه‌های اصلی استقلال خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-07.html"  data-page="05-07"><span>بخش ۷ ـ حذف بردارهای اضافی بدون تغییر Span</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-08.html"  data-page="05-08"><span>بخش ۸ ـ یکتایی ضرایب ترکیب خطی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-09.html"  data-page="05-09"><span>بخش ۹ ـ استقلال خطی توابع (Functions)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-10.html"  data-page="05-10"><span>بخش ۱۰ ـ استقلال خطی چندجمله‌ای‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-11.html"  data-page="05-11"><span>بخش ۱۱ ـ ارتباط استقلال خطی با جواب‌های دستگاه همگن</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/05-review.html"  data-page="05-review"><span>جمع‌بندی فصل پنجم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" ><summary><span class="chapter-number">۶</span><span>پایه و بُعد</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/06-01.html"  data-page="06-01"><span>بخش ۱ ـ شهود مفهوم پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-02.html"  data-page="06-02"><span>بخش ۲ ـ تعریف دقیق پایه (Basis)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-03.html"  data-page="06-03"><span>بخش ۳ ـ پایه‌ی فضاهای مختلف</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-04.html"  data-page="06-04"><span>بخش ۴ ـ بُعد فضای برداری (Dimension)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-05.html"  data-page="06-05"><span>بخش ۵ ـ جدول بُعد فضاهای مهم</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-06.html"  data-page="06-06"><span>بخش ۶ ـ پایه و بُعد زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-07.html"  data-page="06-07"><span>بخش ۷ ـ گسترش مجموعه‌ی مستقل به یک پایه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-08.html"  data-page="06-08"><span>بخش ۸ ـ استخراج پایه از یک مجموعه‌ی مولد</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-09.html"  data-page="06-09"><span>بخش ۹ ـ جمع و اشتراک زیرفضاها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-10.html"  data-page="06-10"><span>بخش ۱۰ ـ جمع سه زیرفضا: دام مهم جزوه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-11.html"  data-page="06-11"><span>بخش ۱۱ ـ دستگاه مختصات و پایه‌ی مرتب (Coordinates)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-12.html"  data-page="06-12"><span>بخش ۱۲ ـ تغییر پایه (مطلب تکمیلی)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/06-review.html"  data-page="06-review"><span>جمع‌بندی فصل ششم</span><span class="done-dot" aria-hidden="true"></span></a></div></details><details class="chapter" open><summary><span class="chapter-number">۷</span><span>رتبه ماتریس</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link  active" href="../pages/07-01.html" aria-current="page" data-page="07-01"><span>بخش ۱ ـ مرور فرم پلکانی و Pivot</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-02.html"  data-page="07-02"><span>بخش ۲ ـ فضای ستونی (Column Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-03.html"  data-page="07-03"><span>بخش ۳ ـ فضای سطری (Row Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-04.html"  data-page="07-04"><span>بخش ۴ ـ تأثیر عملیات سطری بر فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-05.html"  data-page="07-05"><span>بخش ۵ ـ مثال جامع جزوه: فضای سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-06.html"  data-page="07-06"><span>بخش ۶ ـ فضای پوچ (Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-07.html"  data-page="07-07"><span>بخش ۷ ـ فضای پوچ چپ (Left Null Space)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-08.html"  data-page="07-08"><span>بخش ۸ ـ رتبه‌ی ستونی، رتبه‌ی سطری و Nullity</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-09.html"  data-page="07-09"><span>بخش ۹ ـ قضیه‌ی برابری رتبه‌ی سطری و ستونی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-10.html"  data-page="07-10"><span>بخش ۱۰ ـ قضیه‌ی رتبه و پوچی (Rank–Nullity Theorem)</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-11.html"  data-page="07-11"><span>بخش ۱۱ ـ رتبه‌ی حاصل‌ضرب ماتریس‌ها</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-12.html"  data-page="07-12"><span>بخش ۱۲ ـ چهار زیرفضای بنیادی ماتریس</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-13.html"  data-page="07-13"><span>بخش ۱۳ ـ ارتباط رتبه با وجود و یکتایی جواب دستگاه</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-14.html"  data-page="07-14"><span>بخش ۱۴ ـ شرط وجود جواب با فضای پوچ چپ</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-15.html"  data-page="07-15"><span>بخش ۱۵ ـ مثال جامع امتحانی با پارامتر</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-16.html"  data-page="07-16"><span>بخش ۱۶ ـ مثال اثباتی سطح بالا: چه زمانی \(A^TA\) وارون‌پذیر است؟</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/07-17.html"  data-page="07-17"><span>بخش ۱۷ ـ نکات ظریف و دام‌های پرتکرار امتحان</span><span class="done-dot" aria-hidden="true"></span></a></div></details><div class="nav-label">مرور نهایی</div><a class="nav-link " href="../pages/final-quiz.html"  data-page="final-quiz"><span>آزمون نهایی سه فصل</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/formula-sheet.html"  data-page="formula-sheet"><span>خلاصه‌ی نهایی هر سه فصل در یک نقشه‌ی مفهومی</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/corrections.html"  data-page="corrections"><span>چند اصلاح علمی در خود جزوه‌ها</span><span class="done-dot" aria-hidden="true"></span></a><details class="chapter exercise-nav" ><summary><span class="chapter-number">✎</span><span>تمرین‌های تئوری</span><span class="chevron">⌄</span></summary><div class="chapter-links"><a class="nav-link " href="../pages/exercises.html"  data-page="exercises"><span>تمرین‌های تئوری</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/nhw2.html"  data-page="nhw2"><span>تمرین تئوری دوم (NHW2) — ۱۰ سؤال</span><span class="done-dot" aria-hidden="true"></span></a><a class="nav-link " href="../pages/ht2.html"  data-page="ht2"><span>حل تمرین تئوری دوم (HT2) — ۶ سؤال</span><span class="done-dot" aria-hidden="true"></span></a></div></details></nav></aside><main id="lesson"><div class="breadcrumb"><a href="../index.html">خانه</a><span> / </span><span>رتبه ماتریس</span></div><div class="lesson-header"><div class="eyebrow">فصل ۷ · درس</div><h1>بخش ۱ ـ مرور فرم پلکانی و Pivot</h1><div class="meta">صفحه ۲۶ از ۴۸ · ۳ دقیقه مطالعه تقریبی</div></div><article class="article"><h3 id="sub-1">فصل هفتم: رتبه‌ی ماتریس (Matrix Rank)</h3>
+<p>حالا می‌رسیم به فصلی که تمام مفاهیم قبلی را یک‌جا به هم متصل می‌کند.</p>
+<p>در این فصل قرار است به سؤال‌هایی مثل این‌ها پاسخ دهیم:</p>
+<ul>
+<li>یک ماتریس چند ستون مستقل دارد؟</li>
+<li>چند سطر مستقل دارد؟</li>
+<li>چرا تعداد ستون‌های مستقل با تعداد سطرهای مستقل برابر است؟</li>
+<li>دستگاه <span class="math-inline" dir="ltr">\(Ax=b\)</span> چه زمانی جواب دارد؟</li>
+<li>چه زمانی جواب آن یکتاست؟</li>
+<li>یک ماتریس چه اطلاعاتی را از بین می‌برد؟</li>
+<li>چهار زیرفضای بنیادی ماتریس چه ارتباطی با یکدیگر دارند؟</li>
+</ul>
+<p>تمام این سؤال‌ها با یک مفهوم مرکزی پاسخ داده می‌شوند: <strong>Rank</strong>.</p>
+<p>قبل از تعریف رتبه باید RREF را کاملاً بشناسیم.</p>
+<h3 id="sub-2">۱.۱. فرم پلکانی سطری (REF)</h3>
+<p>یک ماتریس در فرم پلکانی است اگر:</p>
+<ol>
+<li>تمام سطرهای صفر در پایین ماتریس باشند.</li>
+<li>اولین درایه‌ی ناصفر هر سطر، سمت راست اولین درایه‌ی ناصفر سطر قبلی باشد.</li>
+<li>زیر هر درایه‌ی پیشرو، تمام درایه‌ها صفر باشند.</li>
+</ol>
+<p>مثلاً:</p>
+<p><span class="math-display" dir="ltr">\[
+A=
+\begin{bmatrix}
+2&amp;3&amp;1&amp;4\\
+0&amp;5&amp;2&amp;7\\
+0&amp;0&amp;0&amp;3\\
+0&amp;0&amp;0&amp;0
+\end{bmatrix}
+\]</span></p>
+<p>یک ماتریس پلکانی است.</p>
+<p>درایه‌های پیشرو:</p>
+<p><span class="math-display" dir="ltr">\[
+2,\quad5,\quad3
+\]</span></p>
+<p>در ستون‌های اول، دوم و چهارم قرار دارند.</p>
+<p>به این موقعیت‌ها Pivot Position و به ستون‌های مربوط به آن‌ها Pivot Column می‌گوییم.</p>
+<h3 id="sub-3">۱.۲. فرم پلکانی کاهش‌یافته (RREF)</h3>
+<p>برای RREF علاوه بر شرایط REF، لازم است:</p>
+<p>درایه‌ی پیشرو هر سطر ناصفر برابر ۱ باشد و در هر ستون Pivot، تمام درایه‌های دیگر صفر باشند.</p>
+<p>مثلاً:</p>
+<p><span class="math-display" dir="ltr">\[
+R=
+\begin{bmatrix}
+1&amp;0&amp;2&amp;0&amp;3\\
+0&amp;1&amp;-1&amp;0&amp;4\\
+0&amp;0&amp;0&amp;1&amp;2\\
+0&amp;0&amp;0&amp;0&amp;0
+\end{bmatrix}
+\]</span></p>
+<div class="widget" data-widget="pivots"></div>
+<p>در این مثال:</p>
+<p><span class="math-display" dir="ltr">\[
+\text{Pivot columns}=\{1,2,4\}
+\]</span></p>
+<p><span class="math-display" dir="ltr">\[
+\text{Free columns}=\{3,5\}
+\]</span></p>
+<p>بنابراین:</p>
+<p><span class="math-display" dir="ltr">\[
+\#\text{pivots}=3
+\]</span></p>
+<p>و:</p>
+<p><span class="math-display" dir="ltr">\[
+\#\text{free variables}=2
+\]</span></p>
+<p>یکی از مهم‌ترین نکات صفحه‌ی چهارم جزوه همین است:</p>
+<p><span class="math-display" dir="ltr">\[
+\boxed{
+\text{Number of nonzero rows}
+=
+\text{Number of pivot columns}
+}
+\]</span></p>
+<p><a href="../sources/7-Matrix%20Rank.pdf#page=4">منبع</a></p>
+<h3 id="sub-4">سه نوع عملیات سطری مجاز</h3>
+<p>در روش گاوس و گاوس-ژردن:</p>
+<p><span class="math-display" dir="ltr">\[
+R_i\leftrightarrow R_j
+\]</span></p>
+<p>جابه‌جایی دو سطر.</p>
+<p><span class="math-display" dir="ltr">\[
+R_i\leftarrow cR_i,\quad c\neq0
+\]</span></p>
+<p>ضرب یک سطر در اسکالر ناصفر.</p>
+<p><span class="math-display" dir="ltr">\[
+R_i\leftarrow R_i+cR_j
+\]</span></p>
+<p>اضافه کردن مضربی از یک سطر دیگر.</p>
+<p>تمام این عملیات وارون‌پذیرند.</p>
+<p>مثلاً اگر:</p>
+<p><span class="math-display" dir="ltr">\[
+R_2\leftarrow R_2-3R_1
+\]</span></p>
+<p>انجام دهیم، با:</p>
+<p><span class="math-display" dir="ltr">\[
+R_2\leftarrow R_2+3R_1
+\]</span></p>
+<p>می‌توانیم به وضعیت قبلی برگردیم.</p>
+<p>همین وارون‌پذیری دلیل حفظ شدن بسیاری از خواص ماتریس تحت عملیات سطری است.</p>
+<hr/>
+</article><button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button><nav class="pager" aria-label="بخش قبلی و بعدی"><a class="page-link" href="../pages/06-review.html"><small>← بخش قبلی</small><span>جمع‌بندی فصل ششم</span></a><a class="page-link next" href="../pages/07-02.html"><small>بخش بعدی →</small><span>بخش ۲ ـ فضای ستونی (Column Space)</span></a></nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه"><h2>در این صفحه</h2><a href="#sub-1">فصل هفتم: رتبه‌ی ماتریس (Matrix Rank)</a><a href="#sub-2">۱.۱. فرم پلکانی سطری (REF)</a><a href="#sub-3">۱.۲. فرم پلکانی کاهش‌یافته (RREF)</a><a href="#sub-4">سه نوع عملیات سطری مجاز</a></aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>
