@@ -2,6 +2,7 @@ from pathlib import Path
 import re, json, html
 import mistune
 from exercise_pages import exercise_pages, TITLES as EX_TITLES
+from new_content import new_lesson_pages, add_slide_figures
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parent
 WIDGET_TEXT=json.loads((ROOT/'content/widget-text.json').read_text(encoding='utf-8'))
@@ -9,7 +10,7 @@ WIDGET_RE=r'<!--widget:([\w-]+)-->'
 def expand_widgets(text):
     return re.sub(WIDGET_RE,lambda m: '\n\n'+WIDGET_TEXT[m.group(1)]+'\n\n',text)
 md=mistune.create_markdown(escape=False,plugins=['table'])
-chapters={'05':'استقلال خطی','06':'پایه و بُعد','07':'رتبه ماتریس'}
+chapters={'05':'استقلال خطی','06':'پایه و بُعد','07':'رتبه ماتریس','08':'فضای ضرب داخلی','09':'تعامد'}
 FA='۰۱۲۳۴۵۶۷۸۹'; EN='0123456789'
 def fa(n):return str(n).translate(str.maketrans(EN,FA))
 def render(text):
@@ -33,7 +34,7 @@ def render(text):
 pages=[]
 intro=(ROOT/'content/00.md').read_text(); title, body=intro.split('\n',1)
 pages.append({'id':'index','chapter':'00','title':title[2:],'body':body,'kind':'home'})
-for ch in chapters:
+for ch in ['05','06','07']:
     src=(ROOT/f'content/{ch}.md').read_text(); first, rest=src.split('\n',1)
     parts=re.split(r'(?m)^## (?=بخش |جمع‌بندی فصل|آزمون نهایی|خلاصه‌ی نهایی|چند اصلاح علمی)',rest)
     pref=parts[0].strip();count=0
@@ -49,13 +50,15 @@ for ch in chapters:
         pages.append({'id':slug,'chapter':ch,'title':heading,'body':body,'kind':kind,'chapter_title':first[2:]})
     assert count=={'05':11,'06':12,'07':17}[ch], (ch,count)
 
+pages.extend(new_lesson_pages(ROOT,render,fa))
 exercise_data,exercise_transcript=exercise_pages(ROOT,render,fa)
 pages.extend(exercise_data)
 
 def url(p,base): return base+'index.html' if p['id']=='index' else base+'pages/'+p['id']+'.html'
 for p in pages:
     if p['kind']=='exercise':continue
-    p['html'],p['toc']=render(p['body'])
+    p['html'],p['toc']=render(p.get('render_body',p['body']))
+    if p.get('slide_images'):p['html']=add_slide_figures(p['html'],p['id'])
     p['plain']=BeautifulSoup(p['html'],'html.parser').get_text(' ',strip=True)
     p['plain']+=' '+ ' '.join(WIDGET_TEXT[k] for k in re.findall(WIDGET_RE,p['body']))
 
@@ -77,13 +80,13 @@ for i,p in enumerate(pages):
     home=''
     if p['id']=='index':
         home='<div class="course-cards">'+''.join(f'<a class="course-card" href="{base}pages/{ch}-01.html"><span class="course-number">{fa(int(ch))}</span><strong>{name}</strong><span>{fa(sum(1 for q in pages if q["chapter"]==ch and q["kind"]=="lesson"))} بخش آموزشی</span><span class="card-arrow">شروع فصل ←</span></a>' for ch,name in chapters.items())+'</div><h2>فایل‌های اصلی جزوه</h2><div class="source-list">'+''.join(f'<a href="{base}sources/{f.name.replace(" ","%20")}" target="_blank" rel="noopener">{esc(f.name)} <small>PDF ↗</small></a>' for f in sorted((ROOT/'sources').glob('*.pdf')))+'</div>'
-    if p['id']=='index':home=f'<h2>تمرین‌های تئوری</h2><div class="exercise-overview"><a class="exercise-tile" href="{base}pages/nhw2.html"><span class="sheet-tag">NHW2</span><strong>تمرین تئوری دوم</strong><span>۱۰ سؤال · پاسخ‌نامه‌ی ارسالی</span><span class="tile-arrow">شروع حل تمرین ←</span></a><a class="exercise-tile" href="{base}pages/ht2.html"><span class="sheet-tag">HT2</span><strong>حل تمرین تئوری دوم</strong><span>۶ سؤال · حل تشریحی مستقل</span><span class="tile-arrow">شروع حل تمرین ←</span></a></div>'+home
+    if p['id']=='index':home=f'<h2>تمرین‌های تئوری</h2><div class="exercise-overview"><a class="exercise-tile" href="{base}pages/nhw2.html"><span class="sheet-tag">NHW2 · تمرین ۲</span><strong>تمرین تئوری دوم</strong><span>۱۰ سؤال · پاسخ‌نامه‌ی ارسالی</span><span class="tile-arrow">شروع حل تمرین ←</span></a><a class="exercise-tile" href="{base}pages/ht2.html"><span class="sheet-tag">HT2 · تمرین ۲</span><strong>حل تمرین تئوری دوم</strong><span>۶ سؤال · حل تشریحی مستقل</span><span class="tile-arrow">شروع حل تمرین ←</span></a><a class="exercise-tile" href="{base}pages/nhw3.html"><span class="sheet-tag">NHW3 · تمرین ۳</span><strong>تمرین تئوری سوم</strong><span>۸ سؤال · پاسخ‌های ارسالی و تصاویر اصلی</span><span class="tile-arrow">مشاهدهٔ تمرین سوم ←</span></a></div>'+home
     if p['id']=='index':home+=f'<h2>متن یکپارچه‌ی همه‌ی مطالب</h2><p><a href="{base}content/full-transcript.md" download>دریافت متن کامل آموزش، فرمول‌ها، آزمون‌ها و متن نمودارها (Markdown)</a></p>'
-    content=f'''<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | جبر خطی</title><link rel="stylesheet" href="{base}assets/style.css"><script>try{{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}}catch(e){{}}</script><script>window.MathJax={{tex:{{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']],processEscapes:true}},svg:{{fontCache:'local'}},options:{{skipHtmlTags:['script','noscript','style','textarea','pre','code']}}}};</script><script defer src="{base}assets/mathjax/tex-svg.js"></script><script defer src="{base}assets/search-data.js"></script><script defer src="{base}assets/widgets.js"></script><script defer src="{base}assets/app.js"></script></head><body data-page="{p['id']}" data-base="{base}"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="{base}index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۴۰</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها">{nav}</nav></aside><main id="lesson"><div class="breadcrumb"><a href="{base}index.html">خانه</a><span> / </span><span>{esc(chapters.get(chapter,'تمرین‌های تئوری' if chapter=='ex' else 'آغاز دوره'))}</span></div><div class="lesson-header"><div class="eyebrow">{'آموزش جامع · سه فصل' if p['id']=='index' else 'تمرین‌های تئوری · پاییز ۱۴۰۵' if chapter=='ex' else 'فصل '+fa(int(chapter))+' · '+('درس' if p['kind']=='lesson' else 'مرور و تمرین')}</div><h1>{esc(title)}</h1><div class="meta">{'۴۰ بخش آموزشی · مطالعه مرحله‌به‌مرحله' if p['id']=='index' else f'صفحه {fa(i)} از {fa(len(pages)-1)} · '+fa(max(1,round(len(p["plain"].split())/140)))+' دقیقه مطالعه تقریبی'}</div></div><article class="article">{p['html']}{home}</article>{'<button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button>' if p['kind']=='lesson' else ''}<nav class="pager" aria-label="بخش قبلی و بعدی">{pager}</nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه">{('<h2>در این صفحه</h2>'+toc) if toc else ''}</aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>'''
+    content=f'''<!doctype html><html lang="fa" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} | جبر خطی</title><link rel="stylesheet" href="{base}assets/style.css"><script>try{{document.documentElement.dataset.theme=localStorage.getItem('la-theme')||'light'}}catch(e){{}}</script><script>window.MathJax={{tex:{{inlineMath:[['\\\\(','\\\\)']],displayMath:[['\\\\[','\\\\]']],processEscapes:true}},svg:{{fontCache:'local'}},options:{{skipHtmlTags:['script','noscript','style','textarea','pre','code']}}}};</script><script defer src="{base}assets/mathjax/tex-svg.js"></script><script defer src="{base}assets/search-data.js"></script><script defer src="{base}assets/widgets.js"></script><script defer src="{base}assets/app.js"></script></head><body data-page="{p['id']}" data-base="{base}"><a class="skip" href="#lesson">رفتن به متن درس</a><header class="topbar"><div class="brand"><button class="icon-btn" id="menu-toggle" aria-label="فهرست فصل‌ها" aria-expanded="false">☰</button><a href="{base}index.html" class="brand-link"><span class="logo">∑</span><span><strong>جبر خطی</strong><small>Linear Algebra · CE282</small></span></a></div><div class="toolbar"><button id="search-open" class="search-button" type="button">⌕ <span>جستجو در درس‌ها</span><kbd>Ctrl K</kbd></button><button class="icon-btn" id="theme-toggle" aria-label="تغییر پوسته">☾</button></div></header><div class="layout"><aside class="sidebar" id="sidebar"><div class="progress-title">پیشرفت مطالعه <span id="progress-count">۰ / ۵۲</span></div><div class="progress-track"><div id="progress-fill"></div></div><nav aria-label="فهرست درس‌ها">{nav}</nav></aside><main id="lesson"><div class="breadcrumb"><a href="{base}index.html">خانه</a><span> / </span><span>{esc(chapters.get(chapter,'تمرین‌های تئوری' if chapter=='ex' else 'آغاز دوره'))}</span></div><div class="lesson-header"><div class="eyebrow">{'آموزش جامع · پنج فصل' if p['id']=='index' else 'تمرین‌های تئوری · پاییز ۱۴۰۵' if chapter=='ex' else 'فصل '+fa(int(chapter))+' · '+('درس' if p['kind']=='lesson' else 'مرور و تمرین')}</div><h1>{esc(title)}</h1><div class="meta">{'۵۲ بخش آموزشی · مطالعه مرحله‌به‌مرحله' if p['id']=='index' else f'صفحه {fa(i)} از {fa(len(pages)-1)} · '+fa(max(1,round(len(p["plain"].split())/140)))+' دقیقه مطالعه تقریبی'}</div></div><article class="article">{p['html']}{home}</article>{'<button class="complete" id="complete-btn">✓ علامت‌گذاری به عنوان مطالعه‌شده</button>' if p['kind']=='lesson' else ''}<nav class="pager" aria-label="بخش قبلی و بعدی">{pager}</nav><footer>جزوه‌ی آموزشی جبر خطی · نسخه محلی · فایل‌های اصلی در صفحه خانه</footer></main><aside class="toc" aria-label="در این صفحه">{('<h2>در این صفحه</h2>'+toc) if toc else ''}</aside></div><dialog id="search-dialog"><div class="dialog-head"><strong>جستجو در محتوای تمام فصل‌ها</strong><button id="search-close" class="icon-btn" aria-label="بستن">×</button></div><input id="search-input" type="search" placeholder="مثلاً فضای پوچ، Pivot، پایه..." autocomplete="off"><div id="search-results" aria-live="polite"></div></dialog></body></html>'''
     # math in headings needs render as math, not escaped markup
     dest=ROOT/'index.html' if p['id']=='index' else ROOT/'pages'/f'{p["id"]}.html'
     dest.write_text(content,encoding='utf-8')
 search=[{'id':p['id'],'title':p['title'],'chapter':chapters.get(p['chapter'],'تمرین‌های تئوری' if p['chapter']=='ex' else 'مقدمه'),'text':p['plain'],'kind':p['kind']} for p in pages]
 (ROOT/'assets/search-data.js').write_text('window.COURSE_PAGES='+json.dumps(search,ensure_ascii=False)+';',encoding='utf-8')
-(ROOT/'content/full-transcript.md').write_text(expand_widgets('\n\n---\n\n'.join((ROOT/f'content/{ch}.md').read_text() for ch in ['00','05','06','07']))+'\n\n---\n\n'+exercise_transcript,encoding='utf-8')
+(ROOT/'content/full-transcript.md').write_text(expand_widgets('\n\n---\n\n'.join((ROOT/f'content/{ch}.md').read_text() for ch in ['00','05','06','07']))+'\n\n---\n\n'+(ROOT/'content/08-09-original.md').read_text(encoding='utf-8')+'\n\n---\n\n'+exercise_transcript,encoding='utf-8')
 print('Built',len(pages),'pages;',sum(p['kind']=='lesson' for p in pages),'numbered lessons')
